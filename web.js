@@ -2,10 +2,12 @@ var express = require("express");
 var app = express();
 app.use(express.logger());
 
+app.use(express.static(__dirname + '/public'));
+
 /* Surface ROUTES */
 // Routes to views
 app.get('/', function(request, response) {
-	response.send('Hello World!');
+	response.sendfile('./views/index.html');
 });
 
 var port = process.env.PORT || 5000;
