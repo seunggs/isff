@@ -6,6 +6,7 @@
 	<link href="css/all.css" media="all" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.main.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
 	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
 </head>
 <body>
@@ -24,12 +25,15 @@
 						<h1>Foodies<br> in Toronto</h1>
 						<p>Discover unique, innovative events <strong>exclusive</strong> to Joylister members.</p>
 						<p>Joylister events sell out like hot cakes. Sign up now to receive invitations to upcoming events.</p>
-						<form class="search-form" action="#">
+						<form id="banner_signup" class="search-form" action="">
 							<fieldset>
-								<input type="text" placeholder="Email">
+								<input type="text" name="email" placeholder="Your email address">
 								<input type="submit"  value="Sign Me Up">
 							</fieldset>
 						</form>
+						<div class="hidden alert alert-info">
+							Messaging goes here
+						</div>
 						<a href="#" class="readmore">OR Check OUT upcoming events ></a>
 					</div>
 				</article>
@@ -89,12 +93,15 @@
 				<section class="info">
 					<h2>It’s Time to Get Out and Enjoy Your Life.</h2>
 					<p>Sign up now to receive invitations to upcoming events.</p>
-					<form class="email-form" action="#">
+					<form id="footer_signup" class="email-form" action="">
 						<fieldset>
-							<input type="text" placeholder="Email">
+							<input type="text" name="email" placeholder="Your email address">
 							<input type="submit"  value="Sign Me Up">
 						</fieldset>
 					</form>
+					<div class="hidden centered alert alert-info">
+						Messaging goes here
+					</div>
 				</section>
 			</div>
 			</div>
@@ -129,10 +136,10 @@
 			</div>
 			<nav id="nav">
 				<ul>
-					<li><a href="#">home</a></li>
+					<li><a href="/">home</a></li>
 					<li><a href="#">terms and conditions</a></li>
 					<li><a href="#">privacy policy</a></li>
-					<li><a href="#">contact us</a></li>
+					<li><a href="mailto:help@joylister.com">contact us</a></li>
 				</ul>
 			</nav>
 			</footer>

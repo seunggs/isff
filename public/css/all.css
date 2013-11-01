@@ -106,6 +106,9 @@ figure {
 	display: block;
 	height: 100%;
 }
+.hidden {
+	display: none;
+}
 #main { overflow: hidden; }
 #header .holder .caption{
 	float: right;
@@ -175,8 +178,8 @@ figure {
 .text p { margin:0 0 9px; }
 #main .holder .post {
 	padding: 0 0;
-	margin: 0 0 161px;
-	height:1%;
+	margin: 0;
+	height: 552px;
 }
 .post:after {
 	content: '';
@@ -186,6 +189,35 @@ figure {
 #main .holder .post img {
 	display: block;
 	padding:0 0 16px;
+}
+.alert {
+	padding: 5px 12px;
+	margin-bottom: 10px;
+}
+.centered {
+	margin: 15px auto 0px;
+	position: relative;
+	max-width:282px;
+}
+.alert-success {
+	color: #468847;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;	
+}
+.alert-success {
+	color: #468847;
+	background-color: #dff0d8;
+	border-color: #d6e9c6;	
+}
+.alert-info {
+	color: #3a87ad;
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+}
+.alert-error {
+	color: #b94a48;
+	background-color: #f2dede;
+	border-color: #ebccd1;
 }
 .readmore{
 	text-transform:uppercase;
