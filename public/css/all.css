@@ -106,9 +106,6 @@ figure {
 	display: block;
 	height: 100%;
 }
-.hidden {
-	display: none;
-}
 #main { overflow: hidden; }
 #header .holder .caption{
 	float: right;
@@ -133,7 +130,7 @@ figure {
 	padding:62px 0 0;
 	color:#6d6d6d;
 }
-#content .post .text.next{ padding:39px 0 0 4px;}
+#content .post .text.next{ padding:24px 0 0 30px;}
 #content .post .text.next h2{ margin:0 0 15px;}
 .holder .post .text{line-height:22px;}
 .holder .post .text p{margin:0 0 10px;}
@@ -142,8 +139,6 @@ figure {
 	color:#6d6d6d;
 }
 .text {
-	margin: 7px 89px 0 0;
-	float: left;
 	width: 305px;
 }
 .text strong a{ color:#ababab;}
@@ -192,7 +187,8 @@ figure {
 }
 .alert {
 	padding: 5px 12px;
-	margin-bottom: 10px;
+	position: absolute;
+	top: 0px;
 }
 .centered {
 	margin: 15px auto 0px;
@@ -220,44 +216,70 @@ figure {
 	border-color: #ebccd1;
 }
 .readmore{
+	display:block;
+	float:left;
 	text-transform:uppercase;
 	text-decoration:underline;
 	font: 12px/22px 'lucida_granderegular', Arial, Helvetica, sans-serif;
 }
 .readmore:hover{ text-decoration:none;}
-.search-form {
-	height: 52px;
-	margin: 0;
+.hidden{ display:none; }
+.signup-form {
+	margin-top: 10px;
 	padding:10px 0 8px;
 	position: relative;
-	width: 371px;
+	width: 305px;
 }
-.search-form input[type="text"] {
-	border: 1px solid #d4d4d4;
-	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1) inset;
-	color: #b4b4b4;
-	font: 16px/18px 'open_sansregular', Arial, Helvetica, sans-serif;
-	height: 18px;
-	float:left;
+.signup-form input[type="text"] {
+	border: none;
+	font: 16px/20px 'open_sansregular', Arial, Helvetica, sans-serif;
+	height: 32px;
 	outline:none;
-	margin:0;
-	padding: 13px 4px 10px 10px;
-	width: 175px;
+	margin:0px;
+	padding: 2px 0px 0px;
 }
-.search-form input[type="submit"] {
+.signup-form .email-inner {
+	border: 1px #ddd solid;
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1) inset;
+	padding:5px 8px;
+	background-color: white;
+	margin-bottom: 5px;
+}
+.signup-form .names-inner{
+		border: 1px #ddd solid;
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1) inset;
+	padding:5px 8px;
+	background-color: white;
+	
+		margin-bottom: 5px;	
+}
+.signup-form .input-half {
+	width: 49%;
+}
+.signup-form .input-full {
+	width: 100%;
+}
+.signup-form input[type="submit"] {
 	background: #c42032;
 	border: 0;
 	font: 16px/41px 'open_sanssemibold', Arial, Helvetica, sans-serif;
 	height: 42px;
 	padding: 1px 0 0;
 	color: #fff;
-	float:left;
 	border:1px solid #870d1a;
-	text-transform:capitalize;
-	width:109px;
+	margin-top: 2px;
+	text-transform: capitalize;
+	width: 110px;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
-.search-form input[type="submit"]:hover { cursor: pointer;}
+.signup-form input[type="submit"]:hover { cursor: pointer;}
+.centered-holder {
+	width:100%;
+	text-align:center;
+}
+.centered-holder form.centered {
+	margin: 0 auto;
+}
 .features {
 	background: #f8f8f8;
 	overflow: hidden;
@@ -312,26 +334,25 @@ figure {
 	font: 16px/24px 'lucida_granderegular', Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 21px 0 0;
-	width: 364px;
+	width: 350px;
 	word-spacing: -2px;
 }
 #content .post .alignright {
 	float: right;
-	margin: 0 -130px 0 0;
+	margin: 0;
 }
 #content .post .alignleft img,
-#content .post .alignright img { display: block; }
+#content .post .alignright img { display: block; max-width: 560px;}
 #content .post .alignleft {
 	float: left;
-	margin: 3px 75px 0 -131px;
-	width: 611px;
+	margin: 0;
 }
 .info-area { background: #5197c5;}
 #main .info-area .holder {
 	width: 940px;
 	margin: 0 auto;
 	color: #dadada;
-	padding: 66px 0 78px;
+	padding: 66px 0;
 	font-size: 16px;
 	line-height: 24px;
 	text-align: center;
