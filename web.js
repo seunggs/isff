@@ -29,41 +29,45 @@ app.get('/email', function(request, response) {
 	var query = url_parts.query;
 
 	if (validateEmail(query)){
-	// 	var path = "/1.3/?method=listSubscribe";
-	// 	// DEV key
-	// 	path += "&apikey=f763c3e3b52322971d34e694d6b45f25-us6";
-	// 	path += "&id=599e0cea16";
-	// 	// PRODUCTION key
-	// 	// path += "&apikey=419d7b769b3aba041aa80a0a7cd4edd1-us6";
-	// 	// path += "&id=743f4bd26a";
-	// 	path += "&email_address=" + query.email.toLowerCase();
-	// 	path += "&double_optin=false";
-	// 	path += "&update_existing=true";
+		var path = "/1.3/?method=listSubscribe";
+		// DEV key
+		path += "&apikey=f763c3e3b52322971d34e694d6b45f25-us6";
+		path += "&id=599e0cea16";
+		// PRODUCTION key
+		// path += "&apikey=419d7b769b3aba041aa80a0a7cd4edd1-us6";
+		// path += "&id=743f4bd26a";
+		path += "&email_address=" + query.email.toLowerCase();
+		path += "&double_optin=false";
+		path += "&update_existing=true";
+		path += "&merge_vars[FNAME]=" + query.fname;
+		path += "&merge_vars[LNAME]=" + query.lname;
 
-	// 	var options = {
-	// 		host: 'us6.api.mailchimp.com',
-	// 		port: 443,
-	// 		path: path,
-	// 		method: 'POST',
-	// 		headers: {
-	// 			'Content-Length': 0
-	// 		}
-	// 	};
+		var options = {
+			host: 'us6.api.mailchimp.com',
+			port: 443,
+			path: path,
+			method: 'POST',
+			headers: {
+				'Content-Length': 0
+			}
+		};
 
-	// 	var req = https.request(options, function(res) {
-	// 		console.log("statusCode: ", res.statusCode);
-	// 		res.setEncoding('utf8');
-	// 		res.on('data', function (chunk) {
-	// 			if(chunk == "true")
-	// 				response.send("Thank you for signing up!");
-	// 			else{
-	// 				response.send("Something went wrong.");
-	// 			}
-	// 		});
-	// });
+		var req = https.request(options, function(res) {
+			console.log("statusCode: ", res.statusCode);
+			res.setEncoding('utf8');
+			res.on('data', function (chunk) {
+				if(chunk == "true")
+					response.json({e:0, msg:"Thank you for signing up!"});
+				else{
+					response.json({e:2, msg:"We're sorry, but we couldn't reach the server at this time. Please try again in a bit!"});
+					console.log("Unable to successfully get response from Mailchimp");
+				}
+			});
+	});
 
 		req.on('error', function(e){
-			response.send("Something went wrong... " + e);
+			response.json({e:2, msg:"We're sorry, but we couldn't reach the server at this time. Please try again in a bit!"});
+			console.log("Error from mailchimp: " + e);
 		});
 		req.end();
 	} else {

@@ -19,6 +19,7 @@ var feedback = function(div, msg, mode) {
 
 $("[id$=signup]").submit(function(){
 	var signup_form = $(this);
+	var submit_btn = $('input[type=submit]', this);
 	var email = $("input[name='email']",signup_form);
 	var fname = $("input[name='fname']",signup_form);
 	var lname = $("input[name='lname']",signup_form);
@@ -26,8 +27,6 @@ $("[id$=signup]").submit(function(){
 
 	alert_div.hide();
 	alert_div.removeClass("alert-info alert-success alert-error");
-
-
 
 	if (email.val() == "" || email.val() == "Your email address") {
 		feedback(alert_div, "That's not a valid email address!", 1);
@@ -45,8 +44,8 @@ $("[id$=signup]").submit(function(){
 			// Option to do something to highlight more
 		});
 	} else {
-		alert_div.addClass("alert-success");
-		alert_div.html("Thanks for signing up!");
+		submit_btn.attr('disabled', 'disabled');
+		feedback(alert_div, "Processing...", 2);
 		alert_div.slideDown("fast", function(){
 			// Option to do something to highlight more
 		});
@@ -60,21 +59,26 @@ $("[id$=signup]").submit(function(){
 				if("e" in data){
 					switch (data.e){
 						case 0: // Successful signup of new email
+							feedback(alert_div, data.msg, data.e);
+							submit_btn.removeAttr('disabled');
 							break;
 
 						case 1: // Some error
 							feedback(alert_div, data.msg, data.e);
+							submit_btn.removeAttr('disabled');
 							break;
 					}
 				} else {
 					// the email GET should always return something
 					// if nothing is returned, we couldn't hit the server
 					feedback(alert_div, "We're sorry, but we couldn't reach the server at this time. Please try again in a bit!", 2);
+					submit_btn.removeAttr('disabled');
 				}
 			} else {
 				// the email GET should always return something
 				// if nothing is returned, we couldn't hit the server
 				feedback(alert_div, "We're sorry, but we couldn't reach the server at this time. Please try again in a bit!", 2);
+				submit_btn.removeAttr('disabled');
 			}
 		})
 	}
