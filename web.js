@@ -29,6 +29,10 @@ app.get('/poutinefest', function(request, response) {
 	response.sendfile('./public/poutine-fest.html')
 })
 
+app.get('/poutine-passport', function(request, response) {
+	response.sendfile('./public/passport.html')
+})
+
 app.get('/privacy', function(request, response) {
 	response.sendfile('./public/privacy.html')
 })
