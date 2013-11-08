@@ -129,7 +129,7 @@ figure {
 	padding:62px 0 0;
 	color:#6d6d6d;
 }
-#content .post .text.next{ padding:24px 0 0 30px;}
+#content .post .text.next{ padding: 24px 0 0 32px;}
 #content .post .text.next h2{ margin:0 0 15px;}
 .holder .post .text{line-height:22px;}
 .holder .post .text p{margin:0 0 10px;}
@@ -325,7 +325,7 @@ figure {
 	font: 16px/24px 'lucida_granderegular', Arial, Helvetica, sans-serif;
 	margin: 0;
 	padding: 21px 0 0;
-	width: 350px;
+	width: 340px;
 	word-spacing: -2px;
 }
 #content .post .alignright {
@@ -333,7 +333,7 @@ figure {
 	margin: 0;
 }
 #content .post .alignleft img,
-#content .post .alignright img { display: block; max-width: 560px;}
+#content .post .alignright img { display: block; max-width: 560px; border: 1px #dfdfde solid;}
 #content .post .alignleft {
 	float: left;
 	margin: 0;

@@ -6,6 +6,7 @@ var http = require("http");
 var app = express();
 // app.use(express.logger());
 
+app.use(express.favicon("https://s3.amazonaws.com/joylister/img/favicon.ico"));
 app.use(express.static(__dirname + '/public'));
 
 /* Helper UTILS */
@@ -19,11 +20,27 @@ var validateEmail = function(query){
 }
 
 /* Surface ROUTES */
-// Routes to views
+// Routes to static views
 app.get('/', function(request, response) {
-	response.sendfile('./views/index.html');
+	response.sendfile('./public/index.html');
 });
 
+app.get('/poutinefest', function(request, response) {
+	response.sendfile('./public/poutine-fest.html')
+})
+
+app.get('/privacy', function(request, response) {
+	response.sendfile('./public/privacy.html')
+})
+app.get('/tac', function(request, response) {
+	response.sendfile('./public/tac.html')
+})
+app.get('/toc', function(request, response) {
+	response.sendfile('./public/toc.html')
+})
+
+/* RESTful ROUTES */
+// Email signup
 app.get('/email', function(request, response) {
 	var url_parts = url.parse(request.url, true);
 	var query = url_parts.query;
@@ -76,6 +93,7 @@ app.get('/email', function(request, response) {
 
 });
 
+// Start the server
 var port = process.env.PORT || 5000;
 app.listen(port, function() {
 	console.log("Listening on " + port);

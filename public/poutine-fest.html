@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">	
+	<head>
+		<meta charset="utf-8">
+		<title>Joylister - your guide to life's most interesting experiences</title>
+
+		<meta property="fb:app_id" content="379631498809528" /> 
+		<meta property="og:title" content="Joylister: Toronto Poutine Fest at Beer Academy" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="https://s3.amazonaws.com/joylister/img/joylister_logo_square.png" />
+		<meta property="og:url"   content="http://www.joylister.com/toronto-poutine-fest"> 
+		<meta property="og:description" content="Our favourite national dish, the Poutine, takes centre stage in Toronto's FIRST Poutine Fest. Join fellow poutine lovers at this mouth watering pub and grub event! It'll be a fun night out with your colleagues, friends and family." />
+		
+		<meta property="fb:admins" content="mike.y.chien" />
+
+		<link href="https://s3.amazonaws.com/joylister/css/bootstrap_12.min.css" rel="stylesheet" media="screen">
+		<link href="https://s3.amazonaws.com/joylister/css/master.css" rel="stylesheet" type="text/css">
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+		<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+		<script src="https://s3.amazonaws.com/joylister/js/bootstrap.min.js"></script>
+		<script src="https://s3.amazonaws.com/joylister/js/poutine.js"></script>
+		<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApYVcWIJbLD2Hcbmpa-DQDfAk3b_q4qzw&sensor=false">
+		</script>
+		<script type="text/javascript">
+			function initialize() {
+
+				var geocoder = new google.maps.Geocoder();
+				var addressString = "";
+
+				var mapOptions = {
+					center: new google.maps.LatLng(-34.397, 150.644),
+					zoom: 15,
+					draggable: false,
+					disableDefaultUI: true,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					panControl: false,
+					zoomControl: true,
+					mapTypeControl: true,
+					scaleControl: false,
+					scrollwheel: false,
+					streetViewControl: false,
+					overviewMapControl: false
+				};
+
+				addressString += "Beer Academy, 75 Victoria Street, Toronto, ON, Canada";
+
+				geocoder.geocode({'address': addressString}, function(results, status){
+					if (status == google.maps.GeocoderStatus.OK){
+						mapOptions.center = results[0].geometry.location;
+
+						var map = new google.maps.Map(document.getElementById("map_canvas"),
+							mapOptions);
+
+						var query_url = escape(results[0].formatted_address);
+						var marker = new google.maps.Marker({
+							map: map,
+							position: results[0].geometry.location,
+							url: "http://maps.google.com/?q=" + query_url
+						});
+
+						google.maps.event.addListener(marker, 'click', function(){
+							parent.window.open(marker.url, 'width=600,height=420');
+						});
+					} else {
+
+					}
+				});
+			}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+
+		</script>
+
+	</head>
+	<body>
+
+		<!-- Nav -->
+		<section id="nav-main-hold">
+			<nav id="nav-main" class="container">
+				<div class="logo-hold">
+					<a href="/" class="logo-site">Joylister.com</a>
+				</div>
+
+				<ul id="user-bar">
+					<li><a data-toggle="modal" data-target="#signup_modal">Sign up</a></li>
+					<!--
+					<span class="divider">|</span>
+					<li><a href="#">Log in</a></li>
+					-->
+				</ul>
+			</nav>
+		</section>
+		<!-- END Nav -->
+
+		<!-- Feature -->
+		<div class="poutine-cover" style="background-image: url(https://s3.amazonaws.com/joylister/img/poutine/bg.jpg)">
+			<header class="container">
+				<div class="banner-block">
+
+				</div>
+				<div class="poutine-block">
+					<h1 class="poutine-title">
+						Toronto's very first poutine fest was epic!
+					</h1>
+
+					<p>400 poutine lovers gathered to celebrate and indulge in our favourite national dish with a gourmet twist from the city's top poutineries.</p>
+					<p>Don't worry if you missed out. You have all made it abundantly clear that there is no shortage of love for this classic dish and we're working hard to bring you more mouth-watering events.</p>
+					<p>Sign up for our mailing list to receive invitations to Joylister's exclusive food festivals including Poutine Fest 2014!</p>
+
+					<div class="share-buttons overlined">
+						<a href="#" class="facebook-share" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;">Share on Facebook</a>
+						
+						<a href="#" class="twitter-share" onclick="window.open('http://twitter.com/share?text=Just+checking+out+%23PoutineFestTO&url=http://joylister.com/toronto-poutine-fest','twitter-share-dialog','width=550,height=284'); return false;">#PoutineFestTO</a>
+					</div>
+				</div>
+			</header>
+		</div>
+		<!-- END Feature -->
+
+		<!-- Sign-up Layer -->
+
+		<!-- Modal -->
+		<div id="signup_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<form id="signup_form" action="">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					<h3 id="signupModalLabel">Start discovering fun experiences with Joylister!</h3>
+				</div>
+				<div class="modal-body">
+					<h4>Sign Up With Your Email Address</h4>
+					<div class="email-field control-group">
+						<input type="text" id="signup_email" name="email" class="email-text-field" placeholder="Your email address">
+					</div>
+					<div class="name-fields" style="display:none;">
+						<input type="text" name="fname" class="name-text-field" placeholder="First name">
+					</div>
+					<div class="name-fields" style="display:none;">
+						<input type="text" name="lname" class="name-text-field" placeholder="Last name">
+					</div>
+				</div>
+				<div id="signup_feedback"></div>
+				<div class="modal-footer">
+					<button id="signup_btn" class="btn btn-primary btn-large create-btn">Create Account</button>
+				</div>
+			</form>
+		</div>
+
+		<!--
+
+		4) Between the top header images and the video clip, we'll put in the recap of Coquine being the winner.  
+
+You can decide how you want to arrange the image and the text.  Definitely include the photo of Chef Sandro Bustamante and Owner Rob Prete, as well as Coquine's logo. If you have room, you can include the photo of the duck confit poutine as well. 
+
+Here's some text for that section:
+
+TORONTO POUTINE KING 2013: COQUINE RESTAURANT
+2075 Yonge Street, Toronto (three blocks south of Yonge St. and Eglinton Ave.)
+
+As voted by expert poutine lovers, local French bistro Coquine Restaurant was crowned the Poutine King of Toronto for their exquisite Duck Confit Poutine.  Congratulations go out to Chef Sandro Bustamante and Owner Rob Prete!
+
+Coquine's Duck Confit Poutine featured Yukon Gold frites topped with demi-glace, smoked provolone, brie, and Quebec duck confit cured for two days and slow-cooked for 5 hours until tender. *drools*
+
+		-->
+
+		<!-- Announcement Layer -->
+		<section id="announcement_content">
+
+		</section>
+
+		<!-- Media Layer -->
+		<section id="media_content" class="poutine-section">
+			<div class="container">
+				<div id="video" class="row">
+					<div id="vid_copy" class="span6">
+						<h3>RECAP: Toronto Poutine Fest featured all you can eat poutine &amp; craft beer!</h3>
+						<p>Our favourite national dish, the Poutine, took centre stage in Toronto's very FIRST Poutine Fest.</p>
+						<p>Check out the video teaser to get a glimpse of the action.</p>
+						<p>Stay tuned for Poutine Fest 2014!</p>
+
+					<div class="share-buttons short-overlined">
+						<a href="#" class="facebook-share" 
+						onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.joylister.com/toronto-poutine-fest#video', 'facebook-share-dialog', 'width=626,height=436'); return false;">Share on Facebook</a>
+
+						<a href="#" class="twitter-share" onclick="window.open('http://twitter.com/share?text=Just+checking+out+the+%23PoutineFestTO+teaser+video%21&url=http://joylister.com/toronto-poutine-fest%23video','twitter-share-dialog','width=550,height=284'); return false;">#PoutineFestTO</a>
+					</div>
+
+					</div>
+					<div id="vid_box" class="span6">
+						<iframe width="460" height="260" src="//www.youtube.com/embed/quUt1iCeL0A" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- What's Included Layer -->
+		<section id="included_content" class="poutine-section">
+			<div class="container">
+				<div id="whats-included" class="row">
+					<div class="span12">
+						<h2 class="poutine-heading">What's included?</h2>
+					</div>
+					<div class="third span4">
+						<div class="third-content">
+							<img src="https://s3.amazonaws.com/joylister/img/poutine/eat.png">
+							<h3>Eat</h3>
+							<p>Taste five different gourmet poutines from the top poutineries in Toronto.</p>
+						</div>
+					</div>
+					<div class="third span4">
+						<div class="third-content">
+							<img src="https://s3.amazonaws.com/joylister/img/poutine/drink.png">
+							<h3>Drink</h3>
+							<p>Sample three different kinds of craft beers*, courtesy of Beer Academy.</p>
+						</div>
+					</div>
+					<div class="third span4">
+						<div class="third-content">
+							<img src="https://s3.amazonaws.com/joylister/img/poutine/pick.png">
+							<h3>Vote</h3>
+							<p>Pick your favourite poutine &amp; help us crown Toronto's first Poutine King at the end of the night!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Participants Content Layer -->
+		<section id="part_content" class="poutine-section">
+
+			<div class="container">
+				<div id="participants" class="row">
+					<div class="span12">
+						<h2 class="poutine-heading">Participating Poutineries</h2>
+
+						<p>Coquine Restaurant</p>
+						<p>Feisty Jack</p>
+						<p>Great Burger Kitchen</p>
+						<p>Lou Dawg's</p>
+						<p>Poutini's House of Poutine</p>
+
+						<img src="https://s3.amazonaws.com/joylister/img/poutine/vendors.jpg">
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- END Participants Content Layer -->
+
+		<section id="faqs_content" class="poutine-section graybg_gradient">
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						<h2 id="faqs" class="poutine-heading">
+							Frequently Asked Questions<br>
+							<span class="sub-heading">Click to show/hide answers</span>
+						</h2>
+					</div>
+					<div class="span6">
+						<div class="left-questions">
+							<h3 class="top question">How much do tickets cost? Is there a ticket limit?</h3>
+							<p class="answer">
+								Tickets cost <strong>$35 + HST</strong> per person and can only be purchased online in advance. Tickets will <strong>not</strong> be sold at the door. There is a limit of 6 tickets per transaction. Once tickets are sold out (and believe me, they will be fast), that's it! Tickets are non-refundable.
+							</p>
+							<h3 class="question">What is included in my ticket?</h3>
+							<p class="answer">
+								Each ticket allows you access to all-you-can-eat poutine from participating vendors, while quantities last. You will also receive 3 drink tickets for 4oz sample-sized craft beers, courtesy of Beer Academy. After you try all the different types of poutine, don't forget to vote for your favourite poutine!
+							</p>
+							<h3 class="question">Is this a family-friendly event? What if I'm under 19 years old?</h3>
+							<p class="answer">
+								All attendees must be <strong>19+ years of age</strong> to attend Toronto Poutine Fest, as this event is being held at Beer Academy (closest intersection is Yonge &amp; Richmond). You must present <strong>valid photo ID</strong> at the door in order to enter the event.
+							</p>
+							<h3 class="question">I don't drink. Could I get non-alcoholic drinks as a substitute?</h3>
+							<p class="answer">
+								Unfortunately, the 3 drink tickets included in your admission price can only be redeemed for 4oz sample-sized craft beers. For non-alcoholic beverages (e.g. juices, pop drinks) and additional beer, wine, spirits can be purchased on-site at Beer Academy. Water is provided for free to all attendees.
+							</p>
+						</div>
+					</div>
+					<div class="span6">
+						<div class="right-questions">
+							<h3 class="top question">How many different types of poutine will I be getting at the event? And what are they?</h3>
+							<div class="answer">
+								Toronto Poutine Fest will be featuring the following 5 poutine types from 5 of Toronto’s top poutine vendors:
+								<ul>
+									<li>Coquine Restaurant: Duck Confit Poutine with Smoked Provolone and Brie</li>
+									<li>Great Burger Kitchen: Butter Chicken Poutine</li>
+									<li>Lou Dawgs: Pulled Pork Poutine</li>
+									<li>Poutini's House of Poutine: The Works Poutine or Traditional Poutine</li>
+									<li>The Feisty Jack Mobile Food Co.: surprise mystery poutine! You’ll have to attend to find out!</li>
+								</ul>
+								Please Note: poutine types listed here are subject to change without notice.
+							</div>
+							<h3 class="question">Are there any vegetarian options?</h3>
+							<p class="answer">
+								Unfortunately, we do not offer any vegetarian options this year. Sorry! :(
+							</p>
+							<h3 class="question">I have allergies to certain food ingredients. Can I still attend?</h3>
+							<p class="answer">
+								We <strong>cannot</strong> guarantee that the food ingredients that you are allergic to (or traces of them) will not be found on site. For example, even though none of the vendors use peanut oil or peanuts, we cannot guarantee that peanuts or traces of peanuts will not be found on premises. If you are allergic to certain foods, you should take necessary precautions on your end and neither Joylister nor Beer Academy will be responsible for any harm done to you due to allergic reactions from foods present at this event.
+							</p>
+							<h3 class="question">When do I have to arrive? How long can I stay for?</h3>
+							<p class="answer">
+								Toronto Poutine Fest is on Thursday, August 22nd, 2013 from 5pm to 10pm. We suggest you arrive as early as possible, as there may be a bit of a wait to get inside Beer Academy during peak hours. The festivities will end at 10pm sharp. Please allocate approximately 1.5 to 2 hours for this event, as there will be lineups for the poutines. Our poutine craftsmen will try their best to churn out as many poutines as they humanly can!
+							</p>
+						</div>
+					</div>
+					<div class="span12">
+						<p class="faq-note">
+							Got more questions? Send us an email at: <a href="mailto:help@joylister.com"><strong>help@joylister.com</strong></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Extras Content Layer -->
+		<section id="extra_content" class="poutine-section">
+
+			<div class="container">
+				<div id="extra" class="row">
+					<div class="top-border span12">
+					</div>
+					<div class="span3">
+						<div class="bordered">
+							<img src="https://s3.amazonaws.com/joylister/img/poutine/contact.png">
+							<h3>Contact Us</h3>
+							<p>If you have any questions or issues, feel free to contact us. We will try to get back to you as soon as we can. :)</p>
+							<p><a href="mailto:help@joylister.com">Contact us</a></p>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="bordered">
+							<img src="https://s3.amazonaws.com/joylister/img/poutine/share.png">
+							<h3>Share</h3>
+							<p class="share-p">Share Toronto Poutine Fest on Facebook and Twitter and spread the joy!</p>
+
+							<div class="share-buttons">
+								<a href="#" class="facebook-share" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;">Share on Facebook</a>
+								
+								<a href="#" class="twitter-share" onclick="window.open('http://twitter.com/share?text=Just+checking+out+%23PoutineFestTO&url=http://joylister.com/toronto-poutine-fest','twitter-share-dialog','width=550,height=284'); return false;">#PoutineFestTO</a>
+							</div>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="bordered">
+							<img src="https://s3.amazonaws.com/joylister/img/poutine/joy.png">
+							<h3>What's Joylister?</h3>
+							<p>Joylister helps you discover interesting and unique life experiences around your city.</p>
+							<p><a href="/">Learn more</a></p>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="unbordered">
+							<img src="https://s3.amazonaws.com/joylister/img/poutine/fun.png">
+							<h3>Discover More Fun</h3>
+							<p>Sign up for Joylister and find more unique and authentic experiences in Toronto.</p>
+							<p><a href="/find">Join the fun</a></p>
+						</div>
+					</div>
+					<div class="bottom-border span12">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- END Extras Content Layer -->
+
+		<section id="action_content">
+			<div class="container">
+				<div id="action" class="row">
+					<div class="span6 offset3">
+						<h2>Don't miss out on another foodie event ever again!</h2>
+						<p>Sign up for our mailing list to receive invitations to Joylister's exclusive food festivals including Poutine Fest 2014!</p>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Footer Area -->
+		<footer id="main_footer">
+			<div class="container">
+				<div class="footer-section row">
+					<div class="find span3">
+						<div class="logo-hold">
+							<a href="/" class="logo-site">Joylister.com</a>
+						</div>
+					</div>
+					<div class="offer span3">
+						<h5>Find an Experience</h5>
+						<ul>
+							<li><a href="/find">Things to Do</a></li>
+							<li><a href="mailto:help@joylister.com">Contact Us</a></li>
+							<li><a href="/tos">Terms of Use</a></li>
+							<li><a href="/privacy">Privacy Policy</a></li>
+						</ul>
+					</div>
+					<div class="about span3">
+						<h5>Connect with Us</h5>
+						<ul class="social-list">
+							<li><a href="http://facebook.com/joylisterfun" target="_blank">facebook.com/joylisterfun</a></li>
+							<li><a href="http://twitter.com/joylisterfun" target="_blank">twitter.com/joylisterfun</a></li>
+							<li><a href="http://pinterest.com/joylisterfun" target="_blank">pinterest.com/joylisterfun</a></li>
+						</ul>
+					</div>
+					<div class="join span3">
+						<h5>Join Us!</h5>
+						<p>Discover unique &amp; authentic experiences in your neighbourhood today!</p>
+						<a class="signup btn-large btn-primary" data-toggle="modal" data-target="#signup_modal">Sign me up</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="footer-section ender span12">
+						<ul>
+							<li>Copyright 2013 Joylister. All Rights Reserved.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- END Footer Area -->
+
+	</body>
+
+	<script type="text/javascript">
+		setTimeout(function(){var a=document.createElement("script");
+		var b=document.getElementsByTagName("script")[0];
+		a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/7991.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+	</script>
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-34106705-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+</html>
