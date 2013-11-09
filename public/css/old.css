@@ -149,7 +149,7 @@ body {
 #nav-main-hold #nav-main ul {
   list-style: none;
   display: block;
-  float: left;
+  float: right;
   margin: 0 auto;
 }
 #nav-main-hold #nav-main ul li {
@@ -158,16 +158,14 @@ body {
   float: none;
 }
 #nav-main-hold #nav-main ul li a {
-  -webkit-text-shadow: 0px -1px 0px #7e0c1f;
-  text-shadow: 0px -1px 0px #7e0c1f;
-  line-height: 58px;
+  line-height: 44px;
   color: white;
   padding: 0 8px;
   font-size: 16px;
   font-weight: 300;
 }
 #nav-main-hold #nav-main ul li a:hover {
-  color: #4dbedd;
+  color: #7e0c1f;
   text-decoration: none;
 }
 #nav-main-hold #nav-main ul#user-bar {
@@ -487,12 +485,11 @@ body {
   font-weight: 300;
 }
 #extra_content #extra .top-border {
-  border-top: 1px solid #ddd;
   margin-bottom: 40px;
 }
 #extra_content #extra .bottom-border {
   border-bottom: 1px solid #ddd;
-  margin-top: 40px;
+  margin-top: 24px;
 }
 #extra_content #extra .bordered {
   min-height: 223px;
@@ -516,13 +513,19 @@ body {
   margin-right: 0;
 }
 #action_content {
+  background-color: #5197c5;
+  padding: 66px 0;
+  color: white;
   text-align: center;
-  margin-bottom: 40px;
 }
 #action_content h2 {
-  font-size: 26px;
-  font-weight: 300;
-  line-height: 36px;
+  font-size: 28px/30px;
+  font-weight: 400;
+  margin: 0px 0px 6px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+#action_content p {
+  color: #dadada;
 }
 #action_content a.inactive {
   background-color: #838383;
@@ -535,6 +538,111 @@ body {
 #action_content .age-disclaimer {
   color: #c41230;
 }
+
+.signup-form {
+  margin: 10px auto 0px;
+  padding:10px 0 8px;
+  position: relative;
+  width: 305px;
+}
+.signup-form input[type="text"] {
+  border: none;
+  font: 16px/20px 'open_sansregular', Arial, Helvetica, sans-serif;
+  height: 32px;
+  outline:none;
+  margin:0px;
+  padding: 2px 0px 0px;
+  box-shadow: none;
+}
+.signup-form .email-inner {
+  border: 1px #ddd solid;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1) inset;
+  padding:5px 8px;
+  background-color: white;
+  margin-bottom: 5px;
+}
+.signup-form .names-inner{
+    border: 1px #ddd solid;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1) inset;
+  padding:5px 8px;
+  background-color: white;
+  
+    margin-bottom: 5px; 
+}
+.signup-form .input-half {
+  width: 49%;
+}
+.signup-form .input-full {
+  width: 100%;
+}
+.signup-form input[type="submit"] {
+  background: #c42032;
+  font: 16px/41px 'open_sanssemibold', Arial, Helvetica, sans-serif;
+  height: 42px;
+  padding: 1px 0 0;
+  color: #fff;
+  border:1px solid #870d1a;
+  margin-top: 2px;
+  text-transform: capitalize;
+  width: 110px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+.signup-form input[type="submit"]:hover { cursor: pointer;}
+.signup-form input[type="submit"]:disabled {
+  cursor: default;
+  border-color: #888;
+  background: #aeaeae;
+  color: #d9d9d9;
+}
+.alert {
+  padding: 5px 8px;
+  width: 284px;
+  webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.centered {
+  margin: 0 auto;
+  position: relative;
+}
+.alert-success {
+  color: #468847;
+  background-color: #dff0d8;
+  border: 1px #d6e9c6 solid;
+}
+.alert-info {
+  color: #3a87ad;
+  background-color: #d9edf7;
+  border: 1px #bce8f1 solid;
+}
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border: 1px #DBB0B7 solid;
+}
+
+#nav {
+  font-size: 14px;
+  line-height: 16px;
+  font-family:'lucida_granderegular', Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  padding: 25px 0;
+  text-align: center;
+}
+#nav ul {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0;
+  text-transform: capitalize;
+}
+#nav ul li a { color: #bababb; }
+#nav ul li {
+  display: inline;
+  margin: 0 14px 0 0;
+  padding: 0 0 0 14px;
+  background: url(../image/seprater.png) no-repeat 0 1px;
+}
+#nav ul li:first-child { background: none;}
 
 .message-area-box {
   -webkit-border-radius: 6px;
