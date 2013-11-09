@@ -6,7 +6,6 @@ var http = require("http");
 var app = express();
 // app.use(express.logger());
 
-app.use(express.favicon("https://s3.amazonaws.com/joylister/img/favicon.ico"));
 app.use(express.static(__dirname + '/public'));
 
 /* Helper UTILS */

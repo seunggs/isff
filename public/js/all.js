@@ -86,4 +86,10 @@ $("[id$=signup]").submit(function(){
 	return false;
 })
 
+/********* Poutine Fest FAQ stuff *********/
+$('.question').click(function(){
+	$(this).next().slideToggle();
+})
+/********* END Poutine Fest FAQ stuff *********/
+
 })

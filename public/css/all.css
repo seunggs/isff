@@ -42,9 +42,9 @@
 	font-family: 'signpaintermedium';
 	src: url('../fonts/sign_painter_house_script-webfont.eot');
 	src: url('../fonts/sign_painter_house_script-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/sign_painter_house_script-webfont.svg#signpaintermedium') format('svg'),
 		url('../fonts/sign_painter_house_script-webfont.woff') format('woff'),
-		url('../fonts/sign_painter_house_script-webfont.ttf') format('truetype'),
-		url('../fonts/sign_painter_house_script-webfont.svg#signpaintermedium') format('svg');
+		url('../fonts/sign_painter_house_script-webfont.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }

@@ -2,7 +2,7 @@
 <html lang="en">	
 	<head>
 		<meta charset="utf-8">
-		<title>Joylister - your guide to life's most interesting experiences</title>
+		<title>Joylister - Toronto Poutine Fest</title>
 
 		<meta property="fb:app_id" content="379631498809528" /> 
 		<meta property="og:title" content="Joylister: Toronto Poutine Fest at Beer Academy" />
@@ -14,13 +14,12 @@
 		<meta property="fb:admins" content="mike.y.chien" />
 
 		<link href="https://s3.amazonaws.com/joylister/css/bootstrap_12.min.css" rel="stylesheet" media="screen">
-		<link href="https://s3.amazonaws.com/joylister/css/master.css" rel="stylesheet" type="text/css">
+		<link href="/css/old.css" rel="stylesheet" type="text/css">
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 		<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
-		<script src="https://s3.amazonaws.com/joylister/js/bootstrap.min.js"></script>
-		<script src="https://s3.amazonaws.com/joylister/js/poutine.js"></script>
+		<script src="/js/all.js"></script>
 		<!--[if lt IE 9]>
 		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -28,97 +27,62 @@
 	</head>
 	<body>
 
-		<!-- Nav -->
-		<section id="nav-main-hold">
-			<nav id="nav-main" class="container">
-				<div class="logo-hold">
-					<a href="/" class="logo-site">Joylister.com</a>
-				</div>
+		<div id="wrapper">
 
-				<ul id="user-bar">
-					<li><a data-toggle="modal" data-target="#signup_modal">Sign up</a></li>
-					<!--
-					<span class="divider">|</span>
-					<li><a href="#">Log in</a></li>
-					-->
-				</ul>
-			</nav>
-		</section>
-		<!-- END Nav -->
-
-		<!-- Feature -->
-		<div class="poutine-cover" style="background-image: url(https://s3.amazonaws.com/joylister/img/poutine/bg.jpg)">
-			<header class="container">
-				<div class="banner-block">
-
-				</div>
-				<div class="poutine-block">
-					<h1 class="poutine-title">
-						Toronto's very first poutine fest was epic!
-					</h1>
-
-					<p>400 poutine lovers gathered to celebrate and indulge in our favourite national dish with a gourmet twist from the city's top poutineries.</p>
-					<p>Don't worry if you missed out. You have all made it abundantly clear that there is no shortage of love for this classic dish and we're working hard to bring you more mouth-watering events.</p>
-					<p>Sign up for our mailing list to receive invitations to Joylister's exclusive food festivals including Poutine Fest 2014!</p>
-
-					<div class="share-buttons overlined">
-						<a href="#" class="facebook-share" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;">Share on Facebook</a>
-						
-						<a href="#" class="twitter-share" onclick="window.open('http://twitter.com/share?text=Just+checking+out+%23PoutineFestTO&url=http://joylister.com/toronto-poutine-fest','twitter-share-dialog','width=550,height=284'); return false;">#PoutineFestTO</a>
+			<!-- Nav -->
+			<section id="nav-main-hold">
+				<nav id="nav-main" class="container">
+					<div class="logo-hold">
+						<a href="/" class="logo-site">Joylister.com</a>
 					</div>
-				</div>
-			</header>
+				</nav>
+			</section>
+			<!-- END Nav -->
+
+			<!-- Feature -->
+			<div class="poutine-cover">
+				<header class="container">
+					<div class="banner-block">
+
+					</div>
+					<div class="poutine-block">
+						<h1 class="poutine-title">
+							Toronto's very first poutine fest was epic!
+						</h1>
+
+						<p>400 poutine lovers gathered to celebrate and indulge in our favourite national dish with a gourmet twist from the city's top poutineries.</p>
+						<p>Don't worry if you missed out. You have all made it abundantly clear that there is no shortage of love for this classic dish and we're working hard to bring you more mouth-watering events.</p>
+						<p>Sign up for our mailing list to receive invitations to Joylister's exclusive food festivals including Poutine Fest 2014!</p>
+
+						<div class="share-buttons overlined">
+							<a href="#" class="facebook-share" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;">Share on Facebook</a>
+							
+							<a href="#" class="twitter-share" onclick="window.open('http://twitter.com/share?text=Just+checking+out+%23PoutineFestTO&url=http://joylister.com/toronto-poutine-fest','twitter-share-dialog','width=550,height=284'); return false;">#PoutineFestTO</a>
+						</div>
+					</div>
+				</header>
+			</div>
+
 		</div>
 		<!-- END Feature -->
 
-		<!-- Sign-up Layer -->
-
-		<!-- Modal -->
-		<div id="signup_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<form id="signup_form" action="">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h3 id="signupModalLabel">Start discovering fun experiences with Joylister!</h3>
-				</div>
-				<div class="modal-body">
-					<h4>Sign Up With Your Email Address</h4>
-					<div class="email-field control-group">
-						<input type="text" id="signup_email" name="email" class="email-text-field" placeholder="Your email address">
-					</div>
-					<div class="name-fields" style="display:none;">
-						<input type="text" name="fname" class="name-text-field" placeholder="First name">
-					</div>
-					<div class="name-fields" style="display:none;">
-						<input type="text" name="lname" class="name-text-field" placeholder="Last name">
-					</div>
-				</div>
-				<div id="signup_feedback"></div>
-				<div class="modal-footer">
-					<button id="signup_btn" class="btn btn-primary btn-large create-btn">Create Account</button>
-				</div>
-			</form>
-		</div>
-
-		<!--
-
-		4) Between the top header images and the video clip, we'll put in the recap of Coquine being the winner.  
-
-You can decide how you want to arrange the image and the text.  Definitely include the photo of Chef Sandro Bustamante and Owner Rob Prete, as well as Coquine's logo. If you have room, you can include the photo of the duck confit poutine as well. 
-
-Here's some text for that section:
-
-TORONTO POUTINE KING 2013: COQUINE RESTAURANT
-2075 Yonge Street, Toronto (three blocks south of Yonge St. and Eglinton Ave.)
-
-As voted by expert poutine lovers, local French bistro Coquine Restaurant was crowned the Poutine King of Toronto for their exquisite Duck Confit Poutine.  Congratulations go out to Chef Sandro Bustamante and Owner Rob Prete!
-
-Coquine's Duck Confit Poutine featured Yukon Gold frites topped with demi-glace, smoked provolone, brie, and Quebec duck confit cured for two days and slow-cooked for 5 hours until tender. *drools*
-
-		-->
-
 		<!-- Announcement Layer -->
-		<section id="announcement_content">
-
+		<section id="announcement_content" class="poutine-section">
+			<div class="container">
+				<div id="winner_content" class="row">
+					<div class="span12">
+						<h2 class="poutine-heading">Toronto Poutine King 2013: Coquine Restaurant</h2>
+					</div>
+					<div class="span5">
+						<img class="winner-portrait" src="../image/coquine-win.jpg">
+					</div>
+					<div class="span7">
+						<img class="logo" src="../image/coquine-logo.png">
+						<p>As voted by expert poutine lovers, local French bistro Coquine Restaurant was crowned the Poutine King of Toronto for their exquisite Duck Confit Poutine.  Congratulations go out to Chef Sandro Bustamante and Owner Rob Prete!</p>
+						<p>Coquine's Duck Confit Poutine featured Yukon Gold frites topped with demi-glace, smoked provolone, brie, and Quebec duck confit cured for two days and slow-cooked for 5 hours until tender. *drools*</p>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<!-- Media Layer -->
