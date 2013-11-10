@@ -131,6 +131,11 @@ figure {
 }
 #content .post .text.next{ padding: 24px 0 0 32px;}
 #content .post .text.next h2{ margin:0 0 15px;}
+#content .post span.link-like{
+	cursor: pointer;
+	color: #c41230;
+}
+#content .post span.link-like:hover{ text-decoration: underline; }
 .holder .post .text{line-height:22px;}
 .holder .post .text p{margin:0 0 10px;}
 .holder .post .text strong{

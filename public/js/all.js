@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	
-$("[id$=email]").click(function(){
+$("#gc_link").click(function(){
+	$("#footer_email").focus();
+})
+$("[id$=email]").focus(function(){
 	// this.parent is the containing div -> next is the names div
 	$(this).parent().next().show();
 })
