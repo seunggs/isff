@@ -13,10 +13,8 @@
 		
 		<meta property="fb:admins" content="mike.y.chien" />
 
-		<!--<link href="http://static.joylister.com/css/font-awesome.css" rel="stylesheet" type="text/css">-->
-		<!--<link href="https://s3.amazonaws.com/como/css/bootstrap.min.css" rel="stylesheet" media="screen">-->
 		<link href="https://s3.amazonaws.com/joylister/css/bootstrap_12.min.css" rel="stylesheet">
-		<link href="https://s3.amazonaws.com/joylister/css/master.css" rel="stylesheet" type="text/css">
+		<link href="/css/old.css" rel="stylesheet" type="text/css">
 
 	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="https://s3.amazonaws.com/joylister/js/bootstrap.min.js"></script>
@@ -38,45 +36,11 @@
 				<div class="logo-hold">
 					<a href="/" class="logo-site">Joylister.com</a>
 				</div>
-
-				<ul id="user-bar">
-					<li><a data-toggle="modal" data-target="#signup_modal">Sign up</a></li>
-					<!--
-					<span class="divider">|</span>
-					<li><a href="#">Log in</a></li>
-					-->
-				</ul>
 			</nav>
 		</section>
 		<!-- END Nav -->
 
 		<!-- Sign-up Layer -->
-
-		<!-- Modal -->
-		<div id="signup_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			<form id="signup_form" action="">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-					<h3 id="signupModalLabel">Start discovering fun experiences with Joylister!</h3>
-				</div>
-				<div class="modal-body">
-					<h4>Sign Up With Your Email Address</h4>
-					<div class="email-field control-group">
-						<input type="text" id="signup_email" name="email" class="email-text-field" placeholder="Your email address">
-					</div>
-					<div class="name-fields" style="display:none;">
-						<input type="text" name="fname" class="name-text-field" placeholder="First name">
-					</div>
-					<div class="name-fields" style="display:none;">
-						<input type="text" name="lname" class="name-text-field" placeholder="Last name">
-					</div>
-				</div>
-				<div id="signup_feedback"></div>
-				<div class="modal-footer">
-					<button id="signup_btn" class="btn btn-primary btn-large create-btn">Create Account</button>
-				</div>
-			</form>
-		</div>
 
 		<!-- Main Thank You Section -->
 		<section id="main_message" class="graybg">
@@ -127,48 +91,63 @@
 			</div>
 		</section>
 
-		<!-- Footer Area -->
-		<footer id="main_footer">
+		<!-- Extras Content Layer -->
+		<section id="extra_content" class="poutine-section">
+
 			<div class="container">
-				<div class="footer-section row">
-					<div class="find span3">
-						<div class="logo-hold">
-							<a href="/" class="logo-site">Joylister.com</a>
+				<div id="extra" class="row">
+					<div class="span3">
+						<div class="unbordered">
+							<img src="https://s3.amazonaws.com/joylister/img/poutine/contact.png">
+							<h3>Contact Us</h3>
+							<p>If you have any questions or issues, feel free to contact us. We will try to get back to you as soon as we can. :)</p>
+							<p><a href="mailto:help@joylister.com">Contact us</a></p>
 						</div>
 					</div>
-					<div class="offer span3">
-						<h5>Find an Experience</h5>
+					<div class="span3">
+						<div class="unbordered">
+							<img src="https://s3.amazonaws.com/joylister/img/poutine/share.png">
+							<h3>Share</h3>
+							<p class="share-p">Share Toronto Poutine Fest on Facebook and Twitter and spread the joy!</p>
+
+							<div class="share-buttons">
+								<a href="#" class="facebook-share" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;">Share on Facebook</a>
+								
+								<a href="#" class="twitter-share" onclick="window.open('http://twitter.com/share?text=Just+checking+out+%23PoutineFestTO&url=http://joylister.com/toronto-poutine-fest','twitter-share-dialog','width=550,height=284'); return false;">#PoutineFestTO</a>
+							</div>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="unbordered">
+							<img src="https://s3.amazonaws.com/joylister/img/poutine/joy.png">
+							<h3>Who's Joylister?</h3>
+							<p>Joylister is a place to discover interesting and unique events around your city.</p>
+							<p><a href="/">Learn more</a></p>
+						</div>
+					</div>
+					<div class="span3">
+						<div class="unbordered">
+							<img src="../image/media.png" style="padding: 14px 0px 12px;">
+							<h3>Media &amp; Sponsors</h3>
+							<p>Interested in providing media coverage or sponsorship? Tell us how you want to get involved.</p>
+							<p><a href="mailto:help@joylister.com">help@joylister.com</a></p>
+						</div>
+					</div>
+					<div class="bottom-border span12">
+					</div>
+
+					<nav class="span12" id="nav">
 						<ul>
-							<li><a href="/find">Things to Do</a></li>
-							<li><a href="mailto:help@joylister.com">Contact Us</a></li>
-							<li><a href="/tos">Terms of Use</a></li>
-							<li><a href="/privacy">Privacy Policy</a></li>
+							<li><a href="/">home</a></li>
+							<li><a href="/tac">terms and conditions</a></li>
+							<li><a href="/privacy">privacy policy</a></li>
+							<li><a href="mailto:help@joylister.com">contact us</a></li>
 						</ul>
-					</div>
-					<div class="about span3">
-						<h5>Connect with Us</h5>
-						<ul class="social-list">
-							<li><a href="http://facebook.com/joylisterfun" target="_blank">facebook.com/joylisterfun</a></li>
-							<li><a href="http://twitter.com/joylisterfun" target="_blank">twitter.com/joylisterfun</a></li>
-							<li><a href="http://pinterest.com/joylisterfun" target="_blank">pinterest.com/joylisterfun</a></li>
-						</ul>
-					</div>
-					<div class="join span3">
-						<h5>Join Us!</h5>
-						<p>Discover unique &amp; authentic experiences in your neighbourhood today!</p>
-						<a class="signup btn-large btn-primary" data-toggle="modal" data-target="#signup_modal">Sign me up</a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="footer-section ender span12">
-						<ul>
-							<li>Copyright 2013 Joylister. All Rights Reserved.</li>
-						</ul>
-					</div>
+					</nav>
 				</div>
 			</div>
-		</footer>
-		<!-- END Footer Area -->
+		</section>
+		<!-- END Extras Content Layer -->
 
 	</body>
 

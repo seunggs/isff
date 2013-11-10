@@ -645,12 +645,8 @@ body {
 #nav ul li:first-child { background: none;}
 
 .message-area-box {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
   padding: 20px 30px 20px;
+  margin: 40px 0px;
   border: 1px solid #dbdbdb;
   color: #838383;
   background-color: white;
