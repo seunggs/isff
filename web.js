@@ -24,7 +24,7 @@ app.get('/', function(request, response) {
 	response.sendfile('./public/index.html');
 });
 
-app.get('/poutinefest', function(request, response) {
+app.get('/poutine-fest', function(request, response) {
 	response.sendfile('./public/poutine-fest.html')
 })
 
@@ -38,8 +38,8 @@ app.get('/privacy', function(request, response) {
 app.get('/tac', function(request, response) {
 	response.sendfile('./public/tac.html')
 })
-app.get('/toc', function(request, response) {
-	response.sendfile('./public/toc.html')
+app.get('/tos', function(request, response) {
+	response.sendfile('./public/tos.html')
 })
 
 /* RESTful ROUTES */
