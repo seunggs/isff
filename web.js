@@ -51,11 +51,11 @@ app.get('/email', function(request, response) {
 	if (validateEmail(query)){
 		var path = "/1.3/?method=listSubscribe";
 		// DEV key
-		path += "&apikey=f763c3e3b52322971d34e694d6b45f25-us6";
-		path += "&id=599e0cea16";
+		// path += "&apikey=f763c3e3b52322971d34e694d6b45f25-us6";
+		// path += "&id=599e0cea16";
 		// PRODUCTION key
-		// path += "&apikey=419d7b769b3aba041aa80a0a7cd4edd1-us6";
-		// path += "&id=743f4bd26a";
+		path += "&apikey=419d7b769b3aba041aa80a0a7cd4edd1-us6";
+		path += "&id=743f4bd26a";
 		path += "&email_address=" + query.email.toLowerCase();
 		path += "&double_optin=false";
 		path += "&update_existing=true";
