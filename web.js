@@ -24,7 +24,7 @@ app.get('/', function(request, response) {
 	response.sendfile('./public/index.html');
 });
 
-app.get('/poutine-fest', function(request, response) {
+app.get('/toronto-poutine-fest', function(request, response) {
 	response.sendfile('./public/poutine-fest.html')
 })
 
