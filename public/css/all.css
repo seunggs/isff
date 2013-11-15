@@ -267,6 +267,7 @@ figure {
 	text-transform: capitalize;
 	width: 110px;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+	-webkit-appearance: none;
 }
 .signup-form input[type="submit"]:hover { cursor: pointer;}
 .signup-form input[type="submit"]:disabled {
