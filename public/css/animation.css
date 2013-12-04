@@ -1,0 +1,197 @@
+/* curtain effect experiment */
+.curtain {
+	opacity: 1;
+
+	-webkit-animation: fadein 1.4s ease-out;
+	-moz-animation: fadein 1.4s ease-out;
+	-ms-animation: fadein 1.4s ease-out;
+	-o-animation: fadein 1.4s ease-out;
+	animation: fadein 1.4s ease-out;
+}
+
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@-moz-keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@-webkit-keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@-ms-keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@-o-keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+/* Top title animation */
+#title-top {
+	position:relative;
+	opacity:0;
+
+	-webkit-animation: toptitle 0.8s ease-out 0.8s forwards;
+	-moz-animation: toptitle 0.8s ease-out 0.8s forwards;
+	-ms-animation: toptitle 0.8s ease-out 0.8s forwards;
+	-o-animation: toptitle 0.8s ease-out 0.8s forwards;
+	animation: toptitle 0.8s ease-out 0.8s forwards;
+}
+
+@keyframes toptitle {
+	from {top: 30px; opacity:0;}
+	to {top: 0px; opacity:1;}
+}
+
+@-moz-keyframes toptitle {
+	from {top: 30px; opacity:0;}
+	to {top: 0px; opacity:1;}
+}
+
+@-webkit-keyframes toptitle {
+	from {top: 30px; opacity:0;}
+	to {top: 0px; opacity:1;}
+}
+
+@-ms-keyframes toptitle {
+	from {top: 30px; opacity:0;}
+	to {top: 0px; opacity:1;}
+}
+
+@-o-keyframes toptitle {
+	from {top: 30px; opacity:0;}
+	to {top: 0px; opacity:1;}
+}
+
+/* barfest logo animation */
+#scrollfx1 {
+	position:relative;
+	top:0px;
+
+	-webkit-transition: 0.8s ease-out;
+	-moz-transition: 0.8s ease-out;
+	-ms-transition: 0.8s ease-out;
+	-o-transition: 0.8s ease-out;
+	transition: 0.8s ease-out;	
+}
+
+#scrollfx1.outViewPort {
+	opacity:0;
+	top:40px;
+}
+
+#scrollfx1.inViewPort {
+	-webkit-transition-delay: 0.1s;
+	-moz-transition-delay: 0.1s;
+	-ms-transition-delay: 0.1s;
+	-o-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+/* benefit icon animation 1 */
+#scrollfx2 {
+	position:relative;
+	top:0px;
+
+	-webkit-transition: 0.8s ease-out;
+	-moz-transition: 0.8s ease-out;
+	-ms-transition: 0.8s ease-out;
+	-o-transition: 0.8s ease-out;
+	transition: 0.8s ease-out;	
+}
+
+#scrollfx2.outViewPort {
+	opacity:0;
+	top:40px;
+}
+
+#scrollfx2.inViewPort {
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	-ms-transition-delay: 0.2s;
+	-o-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+/* benefit icon animation 2 */
+#scrollfx3 {
+	position:relative;
+	top:0px;
+
+	-webkit-transition: 0.8s ease-out;
+	-moz-transition: 0.8s ease-out;
+	-ms-transition: 0.8s ease-out;
+	-o-transition: 0.8s ease-out;
+	transition: 0.8s ease-out;	
+}
+
+#scrollfx3.outViewPort {
+	opacity:0;
+	top:40px;
+}
+
+#scrollfx3.inViewPort {
+	-webkit-transition-delay: 0.4s;
+	-moz-transition-delay: 0.4s;
+	-ms-transition-delay: 0.4s;
+	-o-transition-delay: 0.4s;
+	transition-delay: 0.4s;
+}
+
+/* benefit icon animation 3 */
+#scrollfx4 {
+	position:relative;
+	top:0px;
+
+	-webkit-transition: 0.8s ease-out;
+	-moz-transition: 0.8s ease-out;
+	-ms-transition: 0.8s ease-out;
+	-o-transition: 0.8s ease-out;
+	transition: 0.8s ease-out;	
+}
+
+#scrollfx4.outViewPort {
+	opacity:0;
+	top:40px;
+}
+
+#scrollfx4.inViewPort {
+	-webkit-transition-delay: 0.6s;
+	-moz-transition-delay: 0.6s;
+	-ms-transition-delay: 0.6s;
+	-o-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+
+/* benefit icon animation 4 */
+#scrollfx5 {
+	position:relative;
+	top:0px;
+
+	-webkit-transition: 0.8s ease-out;
+	-moz-transition: 0.8s ease-out;
+	-ms-transition: 0.8s ease-out;
+	-o-transition: 0.8s ease-out;
+	transition: 0.8s ease-out;	
+}
+
+#scrollfx5.outViewPort {
+	opacity:0;
+	top:40px;
+}
+
+#scrollfx5.inViewPort {
+	-webkit-transition-delay: 0.9s;
+	-moz-transition-delay: 0.9s;
+	-ms-transition-delay: 0.9s;
+	-o-transition-delay: 0.9s;
+	transition-delay: 0.9s;
+}
