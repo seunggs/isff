@@ -98,7 +98,9 @@ $("[id$=signup]").submit(function(){
 						case 0: // Successful signup of new email
 							feedback(alert_div, data.msg, data.e);
 							submit_btn.removeAttr('disabled');
-							hide_signup();
+							setTimeout(function(){
+								hide_signup();
+							}, 3000);
 							break;
 
 						case 1: // Some error

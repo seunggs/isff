@@ -51,29 +51,6 @@
 				parent.window.open(marker.url, 'width=600,height=420');
 			});
 
-			// addressString += "60 Simcoe Street, Toronto, ON, M5J 2H5";
-
-			// geocoder.geocode({'address': addressString}, function(results, status){
-			// 	if (status == google.maps.GeocoderStatus.OK){
-			// 		mapOptions.center = results[0].geometry.location;
-
-			// 		var map = new google.maps.Map(document.getElementById("map_canvas"),
-			// 			mapOptions);
-
-			// 		var query_url = escape(results[0].formatted_address);
-			// 		var marker = new google.maps.Marker({
-			// 			map: map,
-			// 			position: results[0].geometry.location,
-			// 			url: "http://maps.google.com/?q=" + query_url
-			// 		});
-
-			// 		google.maps.event.addListener(marker, 'click', function(){
-			// 			parent.window.open(marker.url, 'width=600,height=420');
-			// 		});
-			// 	} else {
-
-			// 	}
-			// });
 		}
 
 		google.maps.event.addDomListener(window, 'load', initialize);
@@ -722,7 +699,7 @@
 		</footer>
 	</div>
 </body>
-<!-- 
+
 	<script type="text/javascript">
 		setTimeout(function(){var a=document.createElement("script");
 		var b=document.getElementsByTagName("script")[0];
@@ -743,5 +720,5 @@
 	  })();
 
 	</script>
- -->
+
 </html>
