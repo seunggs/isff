@@ -788,6 +788,9 @@ figure { margin:0; padding:0; }
 }
 .event-details dd{margin:0;}
 .map-block{overflow:hidden;}
+.map-block #map_canvas{
+	height:420px;
+}
 .map-block img{
 	display:block;
 	width:100%;

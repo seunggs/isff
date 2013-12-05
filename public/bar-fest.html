@@ -12,6 +12,73 @@
 	<script type="text/javascript" src="js/divPeek.min.js"></script>
 	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
 	<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen"/><![endif]-->
+
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApYVcWIJbLD2Hcbmpa-DQDfAk3b_q4qzw&libraries=places&sensor=false">
+	</script>
+	<script type="text/javascript">
+		function initialize() {
+
+			var geocoder = new google.maps.Geocoder();
+			var addressString = "";
+
+			var roythomson = new google.maps.LatLng(43.646809, -79.386467);
+
+			var mapOptions = {
+				center: roythomson,
+				zoom: 15,
+				draggable: false,
+				disableDefaultUI: true,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				panControl: false,
+				zoomControl: true,
+				mapTypeControl: true,
+				scaleControl: false,
+				scrollwheel: false,
+				streetViewControl: false,
+				overviewMapControl: false
+			};
+
+			var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+			var marker = new google.maps.Marker({
+				map: map,
+				position: roythomson,
+				url: "https://maps.google.com/?q=Roy+Thomson+Hall&ie=UTF8&hq=&hnear=60+Simcoe+St,+Toronto,+Ontario+M5J+2H5,+Canada&ll=43.646809,-79.386467&spn=0.00347,0.003905&t=m&z=18&vpsrc=6&iwloc=A&cid=3865338506824785589"
+			});
+
+			google.maps.event.addListener(marker, 'click', function(){
+				parent.window.open(marker.url, 'width=600,height=420');
+			});
+
+			// addressString += "60 Simcoe Street, Toronto, ON, M5J 2H5";
+
+			// geocoder.geocode({'address': addressString}, function(results, status){
+			// 	if (status == google.maps.GeocoderStatus.OK){
+			// 		mapOptions.center = results[0].geometry.location;
+
+			// 		var map = new google.maps.Map(document.getElementById("map_canvas"),
+			// 			mapOptions);
+
+			// 		var query_url = escape(results[0].formatted_address);
+			// 		var marker = new google.maps.Marker({
+			// 			map: map,
+			// 			position: results[0].geometry.location,
+			// 			url: "http://maps.google.com/?q=" + query_url
+			// 		});
+
+			// 		google.maps.event.addListener(marker, 'click', function(){
+			// 			parent.window.open(marker.url, 'width=600,height=420');
+			// 		});
+			// 	} else {
+
+			// 	}
+			// });
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+	</script>
 </head>
 <body>
 	<div id="popover" class="hidden">
@@ -589,15 +656,7 @@
 				</div>
 			</section>
 			<section class="map-block">
-				<span data-picture data-alt="image description">
-						<span data-src="image/bar-fest/img-map.jpg" ></span>
-						<span data-src = "image/bar-fest/img-map-2x.jpg" data-media = "(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
-						<!--[if (lt IE 9) & (!IEMobile)]>
-							<span data-src="image/bar-fest/img-map.jpg"></span>
-						<![endif]-->
-						<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
-						<noscript><img src="image/bar-fest/img-map.jpg" width="1200" height="417" alt="image description" ></noscript>
-					</span>
+				<div id="map_canvas"></div>
 			</section>
 			<section class="faq-block">
 				<h1>Frequently Asked Questions</h1>
