@@ -9,7 +9,7 @@ function initSlideHeader(){
 	var animSpeed = 700;
 	var win = jQuery(window);
 	var fixedClass = 'fixed';
-	jQuery('#header').each(function(){
+	jQuery('#header.slideit').each(function(){
 		var box = jQuery(this);
 		function slideHeader(){
 			if(win.scrollTop() > box.outerHeight()){

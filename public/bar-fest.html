@@ -7,18 +7,34 @@
 	<link rel="stylesheet" media="all" href="css/animation.css" type="text/css"/>
 	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 	<script type="text/javascript" src="js/jquery.main.js"></script>
+	<script type="text/javascript" src="js/bar-fest.js"></script>
 	<script type="text/javascript" src="js/divPeek.js"></script>
 	<script type="text/javascript" src="js/divPeek.min.js"></script>
 	<!--[if IE]><script type="text/javascript" src="js/ie.js"></script><![endif]-->
 	<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" media="screen"/><![endif]-->
 </head>
 <body>
+	<div id="popover" class="hidden">
+		<h1>Sign up now and get first access to<br>Toronto Bar Fest pre-sale tickets.</h1>
+		<form id="pop_signup" class="signup-form" action="">
+			<div class="email-inner">
+				<input id="popup_email" type="text" name="email" placeholder="Your email address" class="input-full placeholder">
+			</div>
+			<div class="names-inner">
+				<input id="popup_fname" class="input-half" type="text" name="fname" placeholder="First name">
+				<input id="popup_lname" class="input-half" type="text" name="lname" placeholder="Last name">
+			</div>
+			<input type="submit" class="button" value="Sign Me Up">
+		</form>
+		<div class="alert alert-info">&nbsp;</div>
+	</div>
+
 	<div id="wrapper" class="curtain">
 		<div class="header-section">
-			<header id="header">
+			<header id="header" class="slideit">
 				<div class="holder">
 					<strong class="logo"><a href="/">Joylister.com</a></strong>
-					<a href="#" class="button button-mini" style="margin-left:20px;">Sign Up</a>
+					<a href="#" class="button button-mini popup-btn" style="margin-left:20px;">Sign Up</a>
 					<nav id="nav">
 						<ul>
 							<li><a href="http://www.torontobarfest.com">Home</a></li>
@@ -28,6 +44,7 @@
 				</div>
 			</header>
 		</div>
+
 		<div id="main">
 			<section class="area">
 				<div class="block centered">
@@ -54,7 +71,7 @@
 						</ul>
 					</div>
 					<p>Experience what the best bars in Toronto have to offer. <br>Sign up now to receive an invitation when tickets go on sale.</p>
-					<a href="#" class="button">Sign Me Up!</a>
+					<a href="#" class="button popup-btn">Sign Me Up!</a>
 					<ul class="info-list">
 						<li><a href="#">@ Roy Thomson Hall</a></li>
 						<li>Friday, Jan 24th, 2014</li>
@@ -308,10 +325,12 @@
 									<noscript><img src="image/bar-fest/img-03.jpg" width="160" height="206" alt="image description" ></noscript>
 								</span>
 							</div>
+<!-- 
 							<div class="text-hover">
 								<span>The Emmet Ray <br>The Feathers Pub</span>
 							</div>
-						</a>
+
+ -->						</a>
 					</div>
 					<div class="box">
 						<a class="link" href="#">
@@ -327,9 +346,11 @@
 									<noscript><img src="image/bar-fest/img-04.jpg" width="139" height="221" alt="image description" ></noscript>
 								</span>
 							</div>
+<!-- 
 							<div class="text-hover">
 								<span>BarChef <br>The Harbord Room</span>
 							</div>
+ -->
 						</a>
 					</div>
 					<div class="box">
@@ -346,9 +367,11 @@
 									<noscript><img src="image/bar-fest/img-05.jpg" width="137" height="181" alt="image description" ></noscript>
 								</span>
 							</div>
+<!-- 
 							<div class="text-hover">
 								<span>Reposado <br>Playa Cabana</span>
 							</div>
+ -->							
 						</a>
 					</div>
 					<div class="box">
@@ -365,9 +388,11 @@
 									<noscript><img src="image/bar-fest/img-06.jpg" width="150" height="194" alt="image description" ></noscript>
 								</span>
 							</div>
+<!-- 
 							<div class="text-hover">
 								<span>Rakia Bar</span>
 							</div>
+ -->							
 						</a>
 					</div>
 					<div class="box">
@@ -384,9 +409,11 @@
 									<noscript><img src="image/bar-fest/img-07.jpg" width="242" height="140" alt="image description" ></noscript>
 								</span>
 							</div>
+<!-- 
 							<div class="text-hover">
 								<span>Rasputin</span>
 							</div>
+ -->							
 						</a>
 					</div>
 					<div class="box">
@@ -403,9 +430,11 @@
 									<noscript><img src="image/bar-fest/img-08.jpg" width="239" height="163" alt="image description" ></noscript>
 								</span>
 							</div>
+<!-- 
 							<div class="text-hover">
 								<span>Kanji <br>Nome Izakaya</span>
 							</div>
+ -->						
 						</a>
 					</div>
 					<div class="box box-2">
@@ -422,9 +451,11 @@
 									<noscript><img src="image/bar-fest/img-09.jpg" width="137" height="181" alt="image description" ></noscript>
 								</span>
 							</div>
+<!-- 
 							<div class="text-hover">
 								<span>Allen’s <br>Archive 909</span>
 							</div>
+ -->
 						</a>
 					</div>
 					<div class="box box-2">
@@ -441,35 +472,57 @@
 									<noscript><img src="image/bar-fest/img-10.jpg" width="122" height="214" alt="image description" ></noscript>
 								</span>
 							</div>
+<!-- 
 							<div class="text-hover">
 								<span>Mill St. Brewery</span>
 							</div>
+ -->
 						</a>
 					</div>
-					<div class="box box-2 box-3">
+					<div class="box">
+						<a class="link" href="#">
+							<span class="title">RUM</span>
+							<div class="img-holder">
+								<span class="img" data-picture data-alt="image description">
+									<span data-src="image/bar-fest/img-11.jpg" ></span>
+									<span data-src = "image/bar-fest/img-11-2x.jpg" data-width="122" data-height="182" data-media = "(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+									<!--[if (lt IE 9) & (!IEMobile)]>
+										<span data-src="image/bar-fest/img-11.jpg"></span>
+									<![endif]-->
+									<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+									<noscript><img src="image/bar-fest/img-11.jpg" width="122" height="182" alt="image description" ></noscript>
+								</span>
+							</div>
+<!-- 
+							<div class="text-hover">
+								<span>The County General</span>
+							</div>
+ -->							
+						</a>
+					</div>
+<!-- 					<div class="box box-2 box-3">
 						<div class="text-box">
 							<span>Award Winning Bars <br>+ <br>Expert Bartenders <br>+ <br>Extensive Selection</span>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</section>
 			<section class="area area-2">
 				<div class="block centered">
 					<h1>Participating Bars</h1>
-					<ul class="logo-list">
-						<li><a href="#" class="logo-1">logo-1</a></li>
-						<li><a href="#" class="logo-2">logo-2</a></li>
-						<li><a href="#" class="logo-3">logo-3</a></li>
-						<li><a href="#" class="logo-4">logo-4</a></li>
-						<li><a href="#" class="logo-5">logo-5</a></li>
-						<li><a href="#" class="logo-6">logo-6</a></li>
-						<li><a href="#" class="logo-7">logo-7</a></li>
-						<li><a href="#" class="logo-8">logo-8</a></li>
-						<li><a href="#" class="logo-9">logo-9</a></li>
-						<li><a href="#" class="logo-10">logo-10</a></li>
-						<li><a href="#" class="logo-11">logo-11</a></li>
-						<li><a href="#" class="logo-12">logo-12</a></li>
-					</ul>
+					<div class="logo-list">
+						<div class="img-holder">
+							<span class="img" data-picture data-alt="image description">
+								<span data-src="image/bar-fest/vendor_logo_group_v1.png" ></span>
+								<span data-src = "image/bar-fest/vendor_logo_group_v1x2.png" data-width="960" data-height="200" data-media = "(-webkit-min-device-pixel-ratio:1.5), (min-resolution:144dpi)" ></span>
+								<!--[if (lt IE 9) & (!IEMobile)]>
+									<span data-src="image/bar-fest/vendor_logo_group_v1.png"></span>
+								<![endif]-->
+								<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+								<noscript><img src="image/bar-fest/vendor_logo_group_v1.png" width="960" height="200" alt="image description" ></noscript>
+							</span>
+						</div>
+					</div>
 				</div>
 				<div class="block centered">
 					<div class="text-box">
@@ -477,7 +530,7 @@
 						<p>General Admission to Toronto Bar Fest includes 8 drink tickets. The top bars in Toronto have created and curated a selection of tasting flights, shots, and specialty cocktails – the majority of which are 1-2 tickets. Additional drink tickets can be purchased at the event.</p>
 						<p>Also enjoy complimentary gourmet snacks in between your drink tastings from a variety of local eateries.</p>
 					</div>
-					<a href="#" class="button">Sign Me Up!</a>
+					<a href="#" class="button popup-btn">Sign Me Up!</a>
 				</div>
 			</section>
 			<section class="event-block">
@@ -598,7 +651,7 @@
 		</footer>
 	</div>
 </body>
-
+<!-- 
 	<script type="text/javascript">
 		setTimeout(function(){var a=document.createElement("script");
 		var b=document.getElementsByTagName("script")[0];
@@ -619,5 +672,5 @@
 	  })();
 
 	</script>
-
+ -->
 </html>

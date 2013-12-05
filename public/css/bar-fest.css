@@ -138,6 +138,74 @@ figure { margin:0; padding:0; }
 }
 #nav ul a{color:#b9b9b9; text-decoration:none;}
 #nav ul a:hover{color:#fff; text-decoration:none;}
+
+.hidden{ display:none; }
+
+#popover{
+	position:absolute;
+	top: 30%;
+	text-align: center;
+	border-top: 1px solid #555;
+	border-bottom: 1px solid #555;
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	padding: 60px 0;
+	z-index: 100;
+}
+
+#popover h1 {
+	font:36px/40px "helvetica_neue_lt_std35_thin";
+	color:#fff;
+	margin:0 0 35px;
+}
+.signup-form {
+	margin: 10px auto;
+	padding:10px 0 8px;
+	position: relative;
+	width: 305px;
+}
+.signup-form input[type="text"] {
+	border: none;
+	font: 16px/20px 'open_sansregular', Arial, Helvetica, sans-serif;
+	height: 32px;
+	outline:none;
+	margin:0px;
+	padding: 2px 0px 0px;
+}
+.signup-form .email-inner {
+	border: 1px #ddd solid;
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1) inset;
+	padding:5px 8px;
+	background-color: white;
+	margin-bottom: 5px;
+}
+.signup-form .names-inner{
+		border: 1px #ddd solid;
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1) inset;
+	padding:5px 8px;
+	background-color: white;
+	
+		margin-bottom: 5px;	
+}
+.signup-form .input-half {
+	width: 49%;
+}
+.signup-form .input-full {
+	width: 100%;
+}
+.signup-form input[type="submit"] {
+	border:0;
+	-webkit-appearance: none;
+	margin: 10px 0px 0px;
+}
+.signup-form input[type="submit"]:hover { cursor: pointer;}
+.signup-form input[type="submit"]:disabled {
+	cursor: default;
+	border-color: #888;
+	background: #aeaeae;
+	color: #d9d9d9;
+}
+
 #main{overflow:hidden;}
 .area{
 	padding:56px 0 63px;
@@ -352,7 +420,7 @@ figure { margin:0; padding:0; }
 }
 .carousel .btn-prev,
 .carousel .btn-next{
-	display:none;
+	display:block;
 	position:absolute;
 	top:50%;
 	left:0;

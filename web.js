@@ -52,6 +52,12 @@ app.get('/email', function(request, response) {
 	var url_parts = url.parse(request.url, true);
 	var query = url_parts.query;
 
+	// Master list Id
+	// 785c85c66f
+		
+	// Bar-fest list ID
+	// 85423af617
+
 	if (validateEmail(query)){
 		var path = "/1.3/?method=listSubscribe";
 		// DEV key
@@ -59,7 +65,14 @@ app.get('/email', function(request, response) {
 		// path += "&id=599e0cea16";
 		// PRODUCTION key
 		path += "&apikey=419d7b769b3aba041aa80a0a7cd4edd1-us6";
-		path += "&id=785c85c66f";
+
+		if (query.list == "tbf") {
+			path += "&id=85423af617";
+			console.log("Toronto Bar Fest Time");
+		} else {
+			path += "&id=785c85c66f";
+			console.log("Regular Time");
+		}
 		path += "&email_address=" + query.email.toLowerCase();
 		path += "&double_optin=false";
 		path += "&update_existing=true";
