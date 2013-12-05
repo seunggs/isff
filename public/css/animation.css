@@ -39,11 +39,11 @@
 	position:relative;
 	opacity:0;
 
-	-webkit-animation: toptitle 0.8s ease-out 0.8s forwards;
-	-moz-animation: toptitle 0.8s ease-out 0.8s forwards;
-	-ms-animation: toptitle 0.8s ease-out 0.8s forwards;
-	-o-animation: toptitle 0.8s ease-out 0.8s forwards;
-	animation: toptitle 0.8s ease-out 0.8s forwards;
+	-webkit-animation: toptitle 0.8s ease-in 0.8s forwards;
+	-moz-animation: toptitle 0.8s ease-in 0.8s forwards;
+	-ms-animation: toptitle 0.8s ease-in 0.8s forwards;
+	-o-animation: toptitle 0.8s ease-in 0.8s forwards;
+	animation: toptitle 0.8s ease-in 0.8s forwards;
 }
 
 @keyframes toptitle {

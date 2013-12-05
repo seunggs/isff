@@ -4,7 +4,7 @@
 //CONFIG: 
 var elementsToTrack = ["#scrollfx1","#scrollfx2","#scrollfx3","#scrollfx4","#scrollfx5","#scrollfx6","#scrollfx7"];
 
-var pixelOffset = -10;
+var pixelOffset = -60;
 var inClassName = "inViewPort";
 var outClassName = "outViewPort";
 //===============================================================================

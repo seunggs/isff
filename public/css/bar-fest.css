@@ -269,7 +269,7 @@ figure { margin:0; padding:0; }
 }
 .drinks-list li{
 	float:left;
-	padding:0 17px 0 18px;
+	padding:0 11px 0 12px;
 	background:url(../image/bar-fest/separator.png) no-repeat 0 8px;
 }
 .drinks-list li:first-child{
@@ -423,8 +423,8 @@ figure { margin:0; padding:0; }
 	display:block;
 	position:absolute;
 	top:50%;
-	left:0;
-	margin:-36px 0 0;
+	left: 0;
+	margin: -36px -20px 0 -20px;
 	background:url(../image/bar-fest/sprite.png) no-repeat 0 -75px;
 	width: 28px;
 	height: 73px;
@@ -462,6 +462,12 @@ figure { margin:0; padding:0; }
 	overflow:hidden;
 }
 .pagination .active a{background-position:-135px -75px;}
+.carousel .short{
+	 margin-top:66px; 
+}
+.carousel .less-short{
+	 margin-top:28px; 
+}
 .carousel .col-holder{
 	padding: 0 0 0 27px;
 	overflow:hidden;
@@ -472,7 +478,7 @@ figure { margin:0; padding:0; }
 	vertical-align:middle;
 	width:410px;
 	margin:0;
-	font:26px/31px "helvetica_neue_lt_std35_thin";
+	font:26px/31px "helvetica_neue_lt_std45_light";
 	color:#bbb;
 	text-align:center;
 }
@@ -480,12 +486,16 @@ figure { margin:0; padding:0; }
 	width:360px;
 	margin: 0 0 0 18px;
 }
+.carousel .col-3{
+	width:380px;
+	margin: 0 0 0 30px;
+}
 .carousel .img{
 	display:block;
 	margin:0 auto;
 }
 .carousel .img-2{margin-bottom:10px;}
-.carousel .img img{vertical-align:top;}
+.carousel .img img{vertical-align: top;}
 .carousel .img-logo{
 	display:block;
 	margin:0 auto 4px;
@@ -507,7 +517,7 @@ figure { margin:0; padding:0; }
 	display:inline-block;
 	vertical-align:top;
 	min-width:126px;
-	padding:5px;
+	padding:7px 5px 5px 5px;
 	margin:0 0 12px;
 	text-transform:uppercase;
 	font-size:11px;
@@ -516,18 +526,17 @@ figure { margin:0; padding:0; }
 	color:#fff;
 	background:#d05d5d;
 	border-radius: 3px;
-	letter-spacing: 1px;
-}
-.carousel .btn:hover{
-	text-decoration:none;
-	background:#cf6969;
+	letter-spacing: 0.5px;
 }
 .carousel h2{
 	font:20px/24px "helvetica_neue_lt_std45_light";
 	margin:0 0 9px;
 	color:#fff;
 }
-.carousel .box p{margin:0;}
+.carousel .box p{
+	margin:0;
+	font-family: "helvetica_neue_lt_std55_roman";
+}
 .title-holder{
 	padding:64px 0 27px;
 	border-top:1px solid #353535;
@@ -568,8 +577,9 @@ figure { margin:0; padding:0; }
 	vertical-align:top;
 	min-width:45px;
 	margin:0 0 30px;
-	padding: 3px 11px 2px;
+	padding: 4px 11px 2px;
 	font-size:11px;
+	color:#fff;
 	line-height:15px;
 	text-transform:uppercase;
 	border-radius: 4px;
