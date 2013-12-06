@@ -60,7 +60,8 @@ a {
 	text-decoration: none;
 	color: #c41230;
 }
-a:hover { text-decoration: underline; }
+a:hover { text-decoration: none; color: #EB7E7E; }
+a:hover h2 { color: #9a9a9a; }
 input, textarea, select {
 	font: 16px/20px 'open_sansregular', Arial, Helvetica, sans-serif;
 	vertical-align: middle;
