@@ -38,7 +38,7 @@ app.get('/toronto-bar-fest', function(request, response) {
 
 // Special link to bar fest purchasing
 app.get('/toronto-bar-fest-presale', function(request, response) {
-	response.redirect('http://ticketing.joylister.com')
+	response.redirect('http://ticketing.joylister.com/purchase/toronto-bar-fest')
 })
 
 app.get('/privacy', function(request, response) {
