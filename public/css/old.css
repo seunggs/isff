@@ -670,6 +670,70 @@ body {
   margin: 0 0 10px 30px;
 }
 
+#oops_content {
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+#oops_content .logo-hold {
+  background-color: #c41230;
+  position: relative;
+  top: 30px;
+  left: 60px;
+  padding: 0 10px;
+  margin: 0 0;
+  float: none;
+}
+#oops_content .logo-hold .logo-site{
+  background: url("https://s3.amazonaws.com/joylister/img/joylister.png") no-repeat center;
+  background-size: contain;
+  display: block;
+  font-size: 24px;
+  line-height: 58px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+  width: 118px;
+  height: 58px;
+}
+#oops_content .image-holder {
+  background-image: url("https://s3.amazonaws.com/www.joylister.com/img/Towards-the-Sun-by-Alexey-Sizov.jpg");
+  height: 1277px;
+}
+#oops_content .main-text {
+  position: relative;
+  top: 60px;
+  left: 60px;
+  width: 600px;
+}
+#oops_content .main-text h1 {
+  font-size: 32px;
+  line-height: 32px;
+  text-align: left;
+  margin: 0 auto;
+}
+#oops_content .main-text h2 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 300;
+  margin: 0 auto;
+}
+#oops_content .message-area {
+  background-color: white;
+  padding-top: 20px;
+}
+#oops_content .message-area .message-title {
+  color: #c41230;
+  font-size: 24px;
+  line-height: 28px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+#oops_content .message-area p {
+  padding-right: 20px;
+}
+
 .uppercase {
   text-transform: uppercase;
 }

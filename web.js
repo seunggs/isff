@@ -7,6 +7,7 @@ var app = express();
 // app.use(express.logger());
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.favicon(__dirname, 'public/image/favicon.ico')); 
 
 /* Helper UTILS */
 var validateEmail = function(query){
@@ -24,6 +25,10 @@ app.get('/', function(request, response) {
 	response.sendfile('./public/index.html');
 });
 
+app.get('/404', function(request, response) {
+	response.sendfile('./public/404.html')
+})
+
 app.get('/toronto-poutine-fest', function(request, response) {
 	response.sendfile('./public/poutine-fest.html')
 })
@@ -32,9 +37,9 @@ app.get('/poutine-passport', function(request, response) {
 	response.sendfile('./public/passport.html')
 })
 
-app.get('/toronto-bar-fest', function(request, response) {
-	response.sendfile('./public/bar-fest.html')
-})
+// app.get('/toronto-bar-fest', function(request, response) {
+// 	response.sendfile('./public/bar-fest.html')
+// })
 
 // Special link to bar fest purchasing
 app.get('/toronto-bar-fest-presale', function(request, response) {
@@ -50,6 +55,10 @@ app.get('/tac', function(request, response) {
 app.get('/tos', function(request, response) {
 	response.sendfile('./public/tos.html')
 })
+
+app.get('*', function(req, res){
+  res.sendfile('./public/404.html', 404);
+});
 
 /* RESTful ROUTES */
 // Email signup
