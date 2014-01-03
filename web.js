@@ -56,10 +56,6 @@ app.get('/tos', function(request, response) {
 	response.sendfile('./public/tos.html')
 })
 
-app.get('*', function(req, res){
-  res.sendfile('./public/404.html', 404);
-});
-
 /* RESTful ROUTES */
 // Email signup
 app.get('/email', function(request, response) {
@@ -122,6 +118,13 @@ app.get('/email', function(request, response) {
 	}
 
 });
+
+
+// Error handling
+app.get('*', function(req, res){
+  res.sendfile('./public/404.html', 404);
+});
+
 
 // Start the server
 var port = process.env.PORT || 5000;
