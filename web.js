@@ -80,13 +80,9 @@ app.get('/email', function(request, response) {
 		// PRODUCTION key
 		path += "&apikey=419d7b769b3aba041aa80a0a7cd4edd1-us6";
 
-		if (query.list == "tbf") {
-			path += "&id=85423af617";
-			console.log("Toronto Bar Fest Time");
-		} else {
-			path += "&id=785c85c66f";
-			console.log("Regular Time");
-		}
+		// Main joylister mailing list
+		path += "&id=785c85c66f";
+
 		path += "&email_address=" + query.email.toLowerCase();
 		path += "&double_optin=false";
 		path += "&update_existing=true";
