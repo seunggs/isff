@@ -33,6 +33,10 @@ app.get('/toronto-poutine-fest', function(request, response) {
 	response.sendfile('./public/poutine-fest.html')
 })
 
+app.get('/grilled-cheese-fest', function(request, response) {
+	response.sendfile('./public/grilled-cheese.html')
+})
+
 app.get('/poutine-passport', function(request, response) {
 	response.sendfile('./public/passport.html')
 })
