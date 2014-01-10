@@ -26,6 +26,7 @@ $("[id$=signup]").submit(function(){
 	var email = $("input[name='email']",signup_form);
 	var fname = $("input[name='fname']",signup_form);
 	var lname = $("input[name='lname']",signup_form);
+	var mail_list = $("input[name='mail_list']",signup_form);
 	var alert_div = signup_form.next("div.alert");
 
 	alert_div.hide();
@@ -56,6 +57,10 @@ $("[id$=signup]").submit(function(){
 		var q = "/email?email=" + email.val();
 		q += "&fname=" + fname.val();
 		q += "&lname=" + lname.val();
+
+		if (typeof(mail_list.val()) !== 'undefined') {
+			q += "&mail_list=" + mail_list.val();
+		}
 
 		$.get(q, function(data){
 			if(data){

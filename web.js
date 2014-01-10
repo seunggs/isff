@@ -7,7 +7,7 @@ var app = express();
 // app.use(express.logger());
 
 app.use(express.static(__dirname + '/public'));
-app.use(express.favicon(__dirname, 'public/image/favicon.ico')); 
+// app.use(express.favicon(__dirname, 'public/image/favicon.ico')); 
 
 /* Helper UTILS */
 var validateEmail = function(query){
@@ -46,9 +46,9 @@ app.get('/poutine-passport', function(request, response) {
 // })
 
 // Special link to bar fest purchasing
-app.get('/toronto-bar-fest-presale', function(request, response) {
-	response.redirect('http://ticketing.joylister.com/purchase/toronto-bar-fest')
-})
+// app.get('/toronto-bar-fest-presale', function(request, response) {
+// 	response.redirect('http://ticketing.joylister.com/purchase/toronto-bar-fest')
+// })
 
 app.get('/privacy', function(request, response) {
 	response.sendfile('./public/privacy.html')
@@ -72,6 +72,9 @@ app.get('/email', function(request, response) {
 	// Bar-fest list ID
 	// 85423af617
 
+	// Grilled cheese list ID
+	// 66f3172c35
+
 	if (validateEmail(query)){
 		var path = "/1.3/?method=listSubscribe";
 		// DEV key
@@ -80,8 +83,20 @@ app.get('/email', function(request, response) {
 		// PRODUCTION key
 		path += "&apikey=419d7b769b3aba041aa80a0a7cd4edd1-us6";
 
+
+		if(typeof(query.mail_list) === 'undefined') {
+			console.log("No list specified");
+			path += "&id=785c85c66f";
+		} else {
+			console.log(query.mail_list + " is the list to be subscribed");
+			if(query.mail_list == 'grilled-cheese-fest') {
+				path += "&id=66f3172c35";
+			} else {
+				path += "&id=785c85c66f"; // default to master list
+			}
+		}
+
 		// Main joylister mailing list
-		path += "&id=785c85c66f";
 
 		path += "&email_address=" + query.email.toLowerCase();
 		path += "&double_optin=false";
