@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	
-$("#gc_link").click(function(){
+$(".signup-link").click(function(){
 	$("#footer_email").focus();
 })
 $("[id$=email]").focus(function(){

@@ -1,10 +1,20 @@
 <html>
 <head>
-	<title>Joylister</title>
+	<title>Joylister - Toronto Grilled Cheese Fest</title>
 	<meta charset="utf-8">
+
+	<meta property="fb:app_id" content="379631498809528" /> 
+	<meta property="og:title" content="Joylister: Toronto Grilled Cheese Fest" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://s3.amazonaws.com/joylister/img/joylister_logo_square.png" />
+	<meta property="og:url"   content="http://www.joylister.com/grilled-cheese-fest" /> 
+	<meta property="og:description" content="Indulge in an array of grilled cheese sandwiches with a gourmet twist on this classic dish. There will be beer and homemade soup, perfect for winter festivities! Event Venue: Roy Thomson Hall; Event Date: Friday, Feb 28th, 2014" />
+	
+	<meta property="fb:admins" content="mike.y.chien" />
 
 	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
 	<script type="text/javascript" src="js/joylister.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
 	<link href="css/style.css" rel="stylesheet" type="text/css"/>
 	<link href="css/js-video.min.css" rel="stylesheet" type="text/css"/>
 
@@ -12,12 +22,58 @@
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	<meta name="viewport" content="initial-scale=1">
+
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApYVcWIJbLD2Hcbmpa-DQDfAk3b_q4qzw&libraries=places&sensor=false">
+	</script>
+	<script type="text/javascript">
+		function initialize() {
+
+			var roythomson = new google.maps.LatLng(43.646809, -79.386467);
+
+			var mapOptions = {
+				center: roythomson,
+				zoom: 15,
+				draggable: false,
+				disableDefaultUI: true,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				panControl: false,
+				zoomControl: true,
+				mapTypeControl: true,
+				scaleControl: false,
+				scrollwheel: false,
+				streetViewControl: false,
+				overviewMapControl: false
+			};
+
+			var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+			var marker = new google.maps.Marker({
+				map: map,
+				position: roythomson,
+				url: "https://maps.google.com/?q=Roy+Thomson+Hall&ie=UTF8&hq=&hnear=60+Simcoe+St,+Toronto,+Ontario+M5J+2H5,+Canada&ll=43.646809,-79.386467&spn=0.00347,0.003905&t=m&z=18&vpsrc=6&iwloc=A&cid=3865338506824785589"
+			});
+
+			google.maps.event.addListener(marker, 'click', function(){
+				parent.window.open(marker.url, 'width=600,height=420');
+			});
+
+			google.maps.event.addDomListener(window, 'resize', function() {
+				map.setCenter(roythomson);
+			});
+
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+	</script>
+
 </head>
 
 <body>
 	<section id="header">
 		<div class="content_cap">
-		   <div class="bg"><img src="images/signup_bg.jpg"/></div>
+		   <div class="bg"><img src="image/grilled-cheese/signup_bg.jpg"/></div>
 
 			<article id="branding">
 				<h1>Grilled Cheese Fest</h1>
@@ -29,7 +85,7 @@
 					<p>Friday, Feb 28th, 2014<br>from 5:30pm to 10pm</p>
 				</div>
 				<div class="signup">
-					<a class="button" href="#signup">Sign-up Now</a>
+					<a class="button signup-link" href="#signup">Sign-up Now</a>
 					<span>Must be 19+ years of age to attend</span>
 				</div>
 				<div class="where">
@@ -50,7 +106,7 @@
 		<div id="sticky_navigation">
 			<div class="demo_container">
 				<ul>
-					<li class="logo"><a href="#"><img src="images/logo_joylister.png" alt="Joylister"/></a></li>
+					<li class="logo"><a href="/"><img src="image/grilled-cheese/logo_joylister.png" alt="Joylister"/></a></li>
 					<!--<li><a href="#" class="selected">Overview</a></li>-->
 					<li><a href="#top_benefits">Benefits</a></li>
 					<li><a href="#vendors">Vendors</a></li>
@@ -58,7 +114,7 @@
 					<li><a href="#FAQ">FAQ</a></li>
 					<li><a href="#event-block">Getting Here</a></li>
 					<li><a href="#sponsors">Sponsors</a></li>
-					<li class="signup"><a class="button" href="#signup">Sign Me Up</a></li>
+					<li class="signup"><a class="signup-link button" href="#signup">Sign Me Up</a></li>
 				</ul>
 			</div>
 		</div>
@@ -78,7 +134,7 @@
 
 					<p><strong>$45 + HST per person</strong></p>
 					<p class="small">Includes all-you-can-eat grilled cheese sandwiches, gourmet soup, and 3 beer samples.</p>
-					<a class="button" href="#signup">Sign-up Now</a>
+					<a class="button signup-link" href="#signup">Sign-up Now</a>
 					<p class="small red">Must be 19+ years of age to attend.</p>
 				</div>
 
@@ -86,7 +142,7 @@
 					<div class="js-video widescreen vimeo">
 						<iframe src="http://player.vimeo.com/video/83490420" width="600" height="337" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="https://vimeo.com/83490420">Joylister Pourtine Fest</a> from <a href="http://vimeo.com/infinitylist">InfinityList</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
 					</div>
-					<!-- <div class="no-vid"><img src="images/bigCheese.jpg"/></div> -->
+					<!-- <div class="no-vid"><img src="image/grilled-cheese/bigCheese.jpg"/></div> -->
 				</div>
 			</article>
 		</div>
@@ -106,7 +162,7 @@
 				</p>
 			</div>
 			<div class="image_content">
-				<img src="images/top_grilledCheese.jpg"/>
+				<img src="image/grilled-cheese/top_grilledCheese.jpg"/>
 			</div>
 
 		</article>
@@ -119,7 +175,7 @@
 				</p>
 			</div>
 			<div class="image_content">
-				<img src="images/top_grillAndSoup.jpg"/>
+				<img src="image/grilled-cheese/top_grillAndSoup.jpg"/>
 			</div>
 		</article>
 
@@ -131,52 +187,26 @@
 				</p>
 			</div>
 			<div class="image_content">
-				<img src="images/top_beer.jpg"/>
+				<img src="image/grilled-cheese/top_beer.jpg"/>
 			</div>
 		</article>
 	</div>
 	</section>
 
-<!--
-	<section id="joylister_experience" name="joylister_experience">
-		<div class="content_cap">        
-			<h2>The Joylister Experience</h2>
-			<h3>As our guest, enjoy the following complimentary services:</h3>
-
-			<ul>
-				<li>
-					<img src="images/icon_hanger.png"/>
-					<span>Coat check service</span>
-				</li>
-				<li>
-					<img src="images/icon_car.png"/>
-					<span>Roy Thomson Hall is within 2 minutes walking distance from St. Andrew TTC subway station.</span>
-				</li>
-				<li>
-					<img src="images/icon_bus.png"/>
-					<span>Joylister shuttle buses to and from the venue from Downsview Subway Station</span>
-				</li>
-			</ul>
-
-			<p>At Joylister, we take pride in giving you that extra level of care to all our guests at our exclusive events.</p>
-		</div>
-	</section>
--->
-
 	<section name="vendors" id="vendors">        
 		<div class="content_cap">
 		<h2>Our Vendors</h2>
 		<ul>
-			<li><img src="images/vendor_logos/MeltGrilledCheese.jpg"/><span>Melt Grilled Cheese</span></li>
-			<li><img src="images/vendor_logos/Cheesewerks.png"/><span>Cheesewerks</span></li>
-			<li><img src="images/vendor_logos/TheConstructionSite.png"/><span>The Construction Site</span></li>
-			<li><img src="images/vendor_logos/JohnnyJackson.jpg"/><span>Johnny Jackson</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/MeltGrilledCheese.jpg"/><span>Melt Grilled Cheese</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/Cheesewerks.png"/><span>Cheesewerks</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/TheConstructionSite.png"/><span>The Construction Site</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/JohnnyJackson.jpg"/><span>Johnny Jackson</span></li>
 		</ul>
 		<ul>
-			<li><img src="images/vendor_logos/CremeFraicheMarket.png"/><span>Crème Fraiche Market Café</span></li>
-			<li><img src="images/vendor_logos/CutTheCheese.png"/><span>Cut the Cheese</span></li>
-			<li><img src="images/vendor_logos/GorillaCheese.jpeg"/><span>Gorilla Cheese</span></li>
-			<li><img src="images/vendor_logos/Artisano.png"/><span>Artisano Bakery</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/CremeFraicheMarket.png"/><span>Crème Fraiche Market Café</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/CutTheCheese.png"/><span>Cut the Cheese</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/GorillaCheese.jpeg"/><span>Gorilla Cheese</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/Artisano.png"/><span>Artisano Bakery</span></li>
 		</ul>        
 		</div>
 	</section> 
@@ -187,7 +217,6 @@
 		<p>A small sample of the delicious creations you'll discover.</p>
 		
 		<h3>Grilled Cheeses</h3>
-		<!--<p>Indulge in a night of all-you-can-eat grilled cheese sandwiches featuring:</p>-->
 		<ul>
 			<li>
 				<span class="item_name">General Kim<br><span>(from CUT THE CHEESE)</span></span>
@@ -226,56 +255,7 @@
 				<span class="item_desc">St.John's Bakery Organic Bread, 2 Year Old Cow Cheddar from Ontario Dairy Thornloe, Ontario Caramelized Onion Chutney, and Organic Butter.</span>
 			</li>
 		</ul>
-			<!--<li>
-				<span class="item_name">Toronto Tuna (vegetarian)</span>
-				<span class="item_desc">Double smoked cheddar, Monterey Jack, roasted red pepper, and sriracha mayo.
-.</span>
-			</li>
-			<li>
-				<span class="item_name">Hog Heaven</span>
-				<span class="item_desc">Smoked cheddar, chipotle pulled pork, cheddar, and caramelized onions.</span>
-			</li>
-			<li>
-				<span class="item_name">Tattooed Chicken</span>
-				<span class="item_desc">Grilled chicken, cheddar, mozzarella, bacon, herbed tomato, garlic mayo.</span>
-			</li>
-			<li>
-				<span class="item_name">The Godfather</span>
-				<span class="item_desc">Mozzarella, grilled chicken, prosciutto, herbed tomato, pesto, spinach, and balsamic glaze.
-.</span>
-			</li>
-			<li>
-				<span class="item_name">Chicken Itza</span>
-				<span class="item_desc">Mozzarella, roast chicken, house-made cilantro corn salsa, salsa roja.</span>
-			</li>
-			<li>
-				<span class="item_name">Charleston (vegetarian)</span>
-				<span class="item_desc">Double-cream brie, oven-caramelized onions, apricot chutney.</span>
-			</li>
-		</ul>
-		<h3>Soups</h3>
-		<ul>
-			<li>
-				<span class="item_name">Tomato Basil</span>
-				<span class="item_desc">Rich and creamy blend of pureed tomatoes simmered with onions and carrots. Finished with a sweet touch of brown sugar and a hint of cayenne pepper.
-.</span>
-			</li>
-			<li>
-				<span class="item_name">Chicken Pot Pie</span>
-				<span class="item_desc">Creamy chicken soup with mixed vegetables and garnished with pie dough.</span>
-			</li>
-		</ul>
-		<ul>
-			<li>
-				<span class="item_name">New England Clam Chowder</span>
-				<span class="item_desc">Traditional New England Clam Chowder with potatoes, green peppers, onions, carrots, celery, chopped clams and fresh thyme.</span>
-			</li>
-			<li>
-				<span class="item_name">Broccoli Cheddar (vegetarian)</span>
-				<span class="item_desc">Creamy vegetable soup with fresh broccoli, mild cheddar cheese, garlic, carrots, celery and onions.</span>
-			</li>
-		</ul>
--->
+
 	</div>
 	</section>
 
@@ -368,7 +348,7 @@
 	<section name="details" id="details">
 
 		<div class="img-bg">
-			<img src="images/img-bg.png" alt="Roy Thomson Hall" >
+			<img src="image/grilled-cheese/img-bg.png" alt="Roy Thomson Hall" >
 		</div>
 
 		<div class="content_cap">
@@ -391,7 +371,7 @@
 	</section>
 
 	<section name="map" id="map">
-
+		<div id="map_canvas"></div>
 	</section>
 
 	<section name="signup" id="signup">
@@ -411,7 +391,7 @@
 				</div>
 				<input type="submit"  value="Sign Me Up">
 			</form>
-			<div class="alert alert-info">This is an alert!</div>
+			<div class="alert alert-info hidden"></div>
 
 		</div>
 
@@ -422,8 +402,8 @@
 		<div class="content_cap">
 			<h2>Our Sponsors</h2>
 			<ul>
-				<li><p>Official Beer Sponsor</p><img src="images/sponsors/CreeSpr_Brewery.jpg"/><span>Creemore Springs Brewery</span></li>
-				<li><p>Official Cheese Sponsor</p><img src="images/sponsors/balderson_logo.png"/><span>Balderson</span></li>
+				<li><p>Official Beer Sponsor</p><img src="image/grilled-cheese/sponsors/CreeSpr_Brewery.jpg"/><span>Creemore Springs Brewery</span></li>
+				<li><p>Official Cheese Sponsor</p><img src="image/grilled-cheese/sponsors/balderson_logo.png"/><span>Balderson</span></li>
 			</ul>        
 		</div>
 	</section>
@@ -432,25 +412,26 @@
 		<div class="content_cap">
 		<div class="footer_bullets">
 			<span class="footer_element">
-				<img src="images/icon_mail.png"/>
+				<img src="image/grilled-cheese/icon_mail.png"/>
 				<h4>Contact us</h4>
 				<p>If you have any questions or feedback, feel free to contact us. We'll get back to you as soon as we can. :)</p>
 				<p><a href="mailto:help@joylister.com">help@joylister.com</a></p>
 			</span>
 			<span class="footer_element">
-				<img src="images/icon_share.png"/>
+				<img src="image/grilled-cheese/icon_share.png"/>
 				<h4>Share</h4>
 				<p>Share Grilled Cheese Fest on Facebook or Twitter and spread the joy!</p>
-				<a class="facebook" href="http://www.facebook.com/joylisterfun"><span>Facebook</span></a>
-				<a class="twitter" href="http://www.twitter.com/joylisterfun"><span>Twitter</span></a>
+
+				<a class="facebook" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;"><span>Facebook</span></a>
+				<a class="twitter" href="#" onclick="window.open('http://twitter.com/share?text=Checking+out+Grilled+Cheese+Fest+on+Joylister+#GrilledCheeseFest!&url=http://www.joylister.com/grilled-cheese-fest','twitter-share-dialog','width=550,height=284'); return false;"><span>Twitter</span></a>
 			</span>
 			<span class="footer_element">
-				<img src="images/icon_mail.png"/>
+				<img src="image/grilled-cheese/icon_mail.png"/>
 				<h4>Who's Joylister?</h4>
 				<p>Joylister is a place to discover interesting and unique events around your city.</p>
 			</span>
 			<span class="footer_element">
-				<img src="images/icon_media.png"/>
+				<img src="image/grilled-cheese/icon_media.png"/>
 				<h4>Media & Sponsors</h4>
 				<p>Interested in providing media coverage or sponsorship? Tell us how you want to get involved.</p>
 				<p><a href="mailto:help@joylister.com">help@joylister.com</a></p>
@@ -460,13 +441,34 @@
 			<hr/>
 
 			<div class="minor_nav">
-				<a href="#">Home</a> | 
-				<a href="#">Terms of Service</a> | 
-				<a href="#">Privacy Policy</a> | 
-				<a href="#">Contact Us</a>
+				<a href="/">Home</a> | 
+				<a href="/tos">Terms of Service</a> | 
+				<a href="/privacy">Privacy Policy</a> | 
+				<a href="mailto:help@joylister.com">Contact Us</a>
 			</div>
 		</div>
 	</section>
 </body>
+
+	<script type="text/javascript">
+		setTimeout(function(){var a=document.createElement("script");
+		var b=document.getElementsByTagName("script")[0];
+		a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/7991.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+	</script>
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-34106705-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
 
 </html>
