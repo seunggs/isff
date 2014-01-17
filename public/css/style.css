@@ -126,6 +126,7 @@ section#header {
   section#header #actions {
     display: -webkit-flex;
     display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
     min-width: 767px;
     margin: 0 auto;
@@ -306,6 +307,7 @@ section {
   overflow: hidden;
   display: -webkit-flex;
   display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
   padding: 40px 20px; }
   @media all and (min-width: 767px), all and (min-width: 767px) {
@@ -332,6 +334,7 @@ article {
   #introduction article {
     display: -webkit-flex;
     display: -moz-flex;
+    display: -ms-flexbox;
     display: flex; }
     #introduction article #intro_text {
       width: 39%;
@@ -388,6 +391,7 @@ article {
       #introduction article {
         display: -webkit-flex;
         display: -moz-flex;
+        display: -ms-flexbox;
         display: flex;
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
@@ -408,6 +412,7 @@ article {
 #top_benefits {
   display: -webkit-flex;
   display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
   background: #fff;
   color: #222;
@@ -415,6 +420,7 @@ article {
   #top_benefits article {
     display: -webkit-flex;
     display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
     -webkit-align-items: center;
     -moz-align-items: center;
@@ -459,6 +465,7 @@ article {
       #top_benefits article {
         display: -webkit-flex;
         display: -moz-flex;
+        display: -ms-flexbox;
         display: flex;
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
@@ -487,6 +494,7 @@ article {
   #joylister_experience ul {
     display: -webkit-flex;
     display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
     margin: 40px 0;
     padding: 0 50px; }
@@ -541,6 +549,7 @@ article {
   #vendors ul, #sponsors ul {
     display: -webkit-flex;
     display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
     -webkit-flex-flow: row wrap;
     -moz-flex-flow: row wrap;
@@ -615,6 +624,7 @@ article {
     box-align: center;
     display: -webkit-flex;
     display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     margin-top: 50px; }
@@ -671,6 +681,7 @@ article {
   #faq ul {
     display: -webkit-flex;
     display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
     -moz-flex-wrap: wrap;
@@ -739,6 +750,7 @@ article {
     box-align: center;
     display: -webkit-flex;
     display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     margin-bottom: 0; }
@@ -775,6 +787,7 @@ article {
       #details article {
         display: -webkit-flex;
         display: -moz-flex;
+        display: -ms-flexbox;
         display: flex;
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
@@ -963,6 +976,7 @@ article {
     box-lines: multiple;
     display: -webkit-flex;
     display: -moz-flex;
+    display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
     -moz-flex-wrap: wrap;
