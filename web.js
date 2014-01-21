@@ -34,6 +34,12 @@ app.get('/toronto-poutine-fest', function(request, response) {
 })
 
 app.get('/grilled-cheese-fest', function(request, response) {
+	// response.sendfile('./public/grilled-cheese.html')
+	response.redirect('http://signup.torontogrilledcheesefest.com')
+
+})
+
+app.get('/grilled-cheese-fest-buynow', function(request, response) {
 	response.sendfile('./public/grilled-cheese.html')
 })
 
