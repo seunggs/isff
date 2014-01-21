@@ -57,9 +57,9 @@ app.get('/poutine-passport', function(request, response) {
 // })
 
 // Special link to grilled cheese fest purchasing
-app.get('/grilled-cheese-fest-presale', function(request, response) {
-	response.redirect('http://ticketing.joylister.com/purchase/grilled-cheese-fest')
-})
+// app.get('/grilled-cheese-fest-presale', function(request, response) {
+// 	response.redirect('http://ticketing.joylister.com/purchase/grilled-cheese-fest')
+// })
 
 app.get('/privacy', function(request, response) {
 	response.sendfile('./public/privacy.html')
