@@ -43,6 +43,10 @@ app.get('/grilled-cheese-fest-buynow', function(request, response) {
 	response.sendfile('./public/grilled-cheese.html')
 })
 
+app.get('/grilled-cheese-fest-media', function(request, response) {
+	response.sendfile('./public/grilled-cheese-media.html')
+})
+
 app.get('/poutine-passport', function(request, response) {
 	response.sendfile('./public/passport.html')
 })
