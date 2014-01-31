@@ -1,0 +1,498 @@
+<html>
+<head>
+	<title>Joylister - Toronto Grilled Cheese Fest</title>
+	<meta charset="utf-8">
+
+	<meta property="fb:app_id" content="379631498809528" /> 
+	<meta property="og:title" content="Joylister: Toronto Grilled Cheese Fest" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="https://s3.amazonaws.com/joylister/img/joylister_logo_square.png" />
+	<meta property="og:url"   content="http://www.joylister.com/grilled-cheese-fest-media" /> 
+	<meta property="og:description" content="Indulge in an array of grilled cheese sandwiches with a gourmet twist on this classic dish. There will be beer and homemade soup, perfect for winter festivities! Event Venue: Roy Thomson Hall; Event Date: Friday, Feb 28th, 2014" />
+	
+	<meta property="fb:admins" content="mike.y.chien" />
+
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="js/joylister.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<link href="css/js-video.min.css" rel="stylesheet" type="text/css"/>
+
+	<script type="text/javascript" src="//use.typekit.net/kfv1bum.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	<meta name="viewport" content="initial-scale=1">
+
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApYVcWIJbLD2Hcbmpa-DQDfAk3b_q4qzw&libraries=places&sensor=false">
+	</script>
+
+	<script type="text/javascript">
+		function initialize() {
+
+			var roythomson = new google.maps.LatLng(43.646809, -79.386467);
+
+			var mapOptions = {
+				center: roythomson,
+				zoom: 15,
+				draggable: false,
+				disableDefaultUI: true,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				panControl: false,
+				zoomControl: true,
+				mapTypeControl: true,
+				scaleControl: false,
+				scrollwheel: false,
+				streetViewControl: false,
+				overviewMapControl: false
+			};
+
+			var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+			var marker = new google.maps.Marker({
+				map: map,
+				position: roythomson,
+				url: "https://maps.google.com/?q=Roy+Thomson+Hall&ie=UTF8&hq=&hnear=60+Simcoe+St,+Toronto,+Ontario+M5J+2H5,+Canada&ll=43.646809,-79.386467&spn=0.00347,0.003905&t=m&z=18&vpsrc=6&iwloc=A&cid=3865338506824785589"
+			});
+
+			google.maps.event.addListener(marker, 'click', function(){
+				parent.window.open(marker.url, 'width=600,height=420');
+			});
+
+			google.maps.event.addDomListener(window, 'resize', function() {
+				map.setCenter(roythomson);
+			});
+
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+
+	</script>
+
+</head>
+
+<body>
+
+		<!-- this will be our navigation menu -->
+	<div id="sticky_disclaimer_wrapper">
+		<div id="sticky_disclaimer">
+				<h1>Media Use Only - This page is a mockup</h1>
+		</div>
+	</div><!-- end #sticky_navigation_wrapper -->
+
+	<section id="header">
+		<div class="content_cap">
+		   <div class="bg"><img src="image/grilled-cheese/signup_bg.jpg"/></div>
+
+			<article id="branding">
+				<h1>Grilled Cheese Fest</h1>
+			</article>
+			
+			<article id="actions">
+				<div class="date">
+					<h3>When</h3>
+					<p>Friday, Feb 28th, 2014<br>from 5:30pm to 10pm</p>
+				</div>
+				<div class="signup">
+					<a class="button" href="#">Buy Now</a>
+					<span>Must be 19+ years of age to attend</span>
+				</div>
+				<div class="where">
+					<h3>Where</h3>
+					<p>Roy Thomson Hall
+						<br>
+						60 Simcoe St, Toronto
+					</p>
+				</div>
+				
+			</article>
+		</div>
+	</section>
+
+	<section name="introduction" id="introduction">
+		<div class="content_cap">
+			<header>
+				<h2>We're taking this celebrated comfort<br/>food to the next level!</h2>
+			</header>
+
+			<article>
+				<div id="intro_text">
+					<p>Indulge in an array of grilled cheese sandwiches with a gourmet twist on this classic dish. There will be beer and homemade soup, perfect for winter festivities.</p>
+
+					<p>Sign up now to receive an invitation when tickets go on sale - it's going to be epic!</p>
+
+					<p><strong>$39.99 + HST per person</strong></p>
+					<p class="small">Includes all-you-can-eat grilled cheese sandwiches, gourmet soup, and 3 beer samples.</p>
+					<a class="button" href="#">Buy Now</a>
+					<p class="small red">Must be 19+ years of age to attend.</p>
+				</div>
+
+				<div id="intro_vid">
+					<div class="js-video widescreen vimeo">
+						<iframe src="http://player.vimeo.com/video/83490420" width="600" height="337" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="https://vimeo.com/83490420">Joylister Pourtine Fest</a> from <a href="http://vimeo.com/infinitylist">InfinityList</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+					</div>
+					<!-- <div class="no-vid"><img src="image/grilled-cheese/bigCheese.jpg"/></div> -->
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<section name="top_benefits" id="top_benefits">
+		<div class="content_cap">
+		<header>
+			<h2>What you'll get</h2>
+		</header>
+		
+		<article class="sandwiches">
+			<div class="text_content">
+				<h3>Grilled cheese sandwiches galore</h3>
+				<p>
+					We've curated Toronto's Top Grilled Cheese Masters to bring to you a feast for the eyes, mouth, and stomach on this classic comfort dish prepared with fresh, gourmet ingredients. You'll be able to sample a variety of grilled cheese sandwiches till your heart's content, all under one roof.
+				</p>
+			</div>
+			<div class="image_content">
+				<img src="image/grilled-cheese/top_grilledCheese.jpg"/>
+			</div>
+
+		</article>
+
+		<article class="sandwichesAndSoup">            
+			<div class="text_content omega">
+				<h3>Gourmet soup pairing</h3>
+				<p>
+					Enrich your grilled cheese experience with gourmet soup pairings. Our vendors have lovingly prepared authentic, hand-crafted fresh soups to bring a touch of comfort and warmth to the winter festivities.
+				</p>
+			</div>
+			<div class="image_content">
+				<img src="image/grilled-cheese/top_grillAndSoup.jpg"/>
+			</div>
+		</article>
+
+		<article class="beerPairings">
+			<div class="text_content">
+				<h3>Beer-hopping goodness</h3>
+				<p>
+					Quench your thirst with locally-brewed perfection. Sip and savour the refreshing taste of Creemore Springs Premium Lager, made with the finest malted barley, pure spring water, and imported hops. Let the good times roll!
+				</p>
+			</div>
+			<div class="image_content">
+				<img src="image/grilled-cheese/top_beer.jpg"/>
+			</div>
+		</article>
+	</div>
+	</section>
+
+	<section name="vendors" id="vendors">        
+		<div class="content_cap">
+		<h2>Our Vendors</h2>
+		<ul>
+			<li><img src="image/grilled-cheese/vendor_logos/MeltGrilledCheese.jpg"/><span>Melt Grilled Cheese</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/Cheesewerks.png"/><span>Cheesewerks</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/TheConstructionSite.png"/><span>The Construction Site</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/JohnnyJackson.jpg"/><span>Johnny Jackson</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/CremeFraicheMarket.png"/><span>Crème Fraiche Market Café</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/CutTheCheese.png"/><span>Cut the Cheese</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/GorillaCheese.jpeg"/><span>Gorilla Cheese</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/artisano.png"/><span>Artisano Bakery</span></li>
+			<li><img src="image/grilled-cheese/vendor_logos/leslieville_logo.png"/><span>Leslieville Cheese Market</span></li>
+		</ul>        
+		</div>
+	</section> 
+
+	<section name="menu" id="menu">
+		<div class="content_cap">
+		<h2>The Menu</h2>
+		<p>A small sample of the delicious creations you'll discover.</p>
+		
+		<h3>Grilled Cheeses</h3>
+		<ul>
+			<li>
+				<span class="item_name">General Kim<br><span>(from CUT THE CHEESE)</span></span>
+				<span class="item_desc">Kimchi, sweet soy pork, lotus chips, cilantro, and fontina cheese on light rye bread.</span>
+			</li>
+			<li>
+				<span class="item_name">The Jackrabbit
+					<span class="veggie">*</span>
+					<br>
+					<span>(from JOHNNY JACKSON)</span>
+				</span>
+				<span class="item_desc">Triple decker grilled cheese sandwich of thick-cut Texas white bread and American cheddar.</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<span class="item_name">Beijing<br><span>(from CHEESEWERKS)</span></span>
+				<span class="item_desc">Asiago, Chinese BBQ Pork, Slivered Green Onions, Hoisin grilled on Herb + Onion Sourdough.</span>
+			</li>
+			<li>
+				<span class="item_name">Special Limited Edition<br><span>(from CHEESEWERKS)</span></span>
+				<span class="item_desc">An exclusive, never-before-eaten Grilled Cheese as Voted by CHEESEWERKS Fans.</span>
+			</li>			
+		</ul>
+		<ul>
+			<li>
+				<span class="item_name">Tatooed Chicken<br><span>(from MELT GRILLED CHEESE)</span></span>
+				<span class="item_desc">Chicken, cheddar cheese, mozzarella cheese, bacon, herbed tomato, and garlic mayo.</span>
+			</li>
+			<li>
+				<span class="item_name">Bacon Avocado<br><span>(from MELT GRILLED CHEESE)</span></span>
+				<span class="item_desc">Cheddar cheese, monterey jack cheese,  bacon, avocado, spinach, red onion, tomato, and garlic mayo.</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<span class="item_name">The Sheeva
+					<span class="veggie">*</span>
+					<br>
+					<span>(from THE CONSTRUCTION SITE)</span>
+				</span>
+				<span class="item_desc">4-cheese Macaroni & Cheese sandwich with margarine, egg loaf, panko bread crumbs, parmesan cheese, aged cheddar, jalapeño havarti cheese, and edam cheese.</span>
+			</li>
+			<li>
+				<span class="item_name">Creme Fraiche Market
+					<span class="veggie">*</span>
+					<br>
+					<span>(from CREME FRAICHE MARKET)</span>
+				</span>
+				<span class="item_desc">St.John's Bakery Organic Bread, 2 Year Old Cow Cheddar from Ontario Dairy Thornloe, Ontario Caramelized Onion Chutney, and Organic Butter.</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<span class="item_name">The Hawaiian Steak
+					<br>
+					<span>(from LESLIEVILLE CHEESE MARKET)</span>
+				</span>
+				<span class="item_desc">Rye bread, Spam, Swiss Cheese, Cole Slaw, Green onions, Hungarian Smoked Paprika Spread.</span>
+			</li>
+			<li>
+				<span class="item_name">Wafella (Gluten Free)
+					<span class="veggie">*</span>
+					<br>
+					<span>(from LESLIEVILLE CHEESE MARKET)</span>
+				</span>
+				<span class="item_desc">Gluten Free Waffles, Coconut Gouda, Nutella.</span>
+			</li>
+		</ul>
+
+	</div>
+	</section>
+
+	<section name="FAQ" id="FAQ">
+		<div class="content_cap">
+		<h2>Frequently Asked Questions</h2>
+		<ul>
+			<li>
+				<span class="question">
+					How much do tickets cost? Is there a ticket limit?
+				</span>
+				<span class="answer">
+					<p>Tickets cost $39.99 + HST per person and can only be purchased online in advance. Tickets will not be sold at the door.</p>
+					<p>There is a limit of 8 tickets per transaction. Once tickets are sold out (and believe me, they will be fast), that's it!</p>
+				</span>
+			</li>
+			<li>
+				<span class="question">
+					What is included in my ticket?
+				</span>
+				<span class="answer">
+					<p>Each ticket allows you access to all-you-can-eat grilled cheese sandwiches and gourmet soup from participating vendors, while quantities last.</p>
+					<p>You will also receive 3 drink tickets for 4oz sample-sized beers.</p>
+				</span>
+			</li>
+			<li>
+				<span class="question">
+					I don't drink. Could I get non-alcoholic drinks as a substitute?
+				</span>
+				<span class="answer">
+					<p>Absolutely. The 3 drink tickets included in your admission price can be redeemed for non-alcoholic beverages as well.</p>
+				</span>
+			</li>			
+		</ul>
+		<ul>    
+			<li>
+				<span class="question">
+					I have allergies to certain food ingredients. Can I still attend?
+				</span>
+				<span class="answer">
+					<p>We CANNOT guarantee that the food ingredients that you are allergic to (or traces of them) will not be found on site. For example, even though none of the vendors use peanut oil or peanuts, we cannot guarantee that peanuts or traces of peanuts will not be found on premises.</p>
+					<p>If you are allergic to certain foods, you should take necessary precautions on your end and neither Joylister nor Roy Thomson Hall will be responsible for any harm done to you due to allergic reactions from foods present at this event.</p>
+				</span>
+			</li>    
+			<li>
+				<span class="question">
+					When do I have to arrive? How long can I stay for?
+				</span>
+				<span class="answer">
+					<p>Grilled Cheese Fest is on Friday, February 28, 2014 from 5:30pm to 10pm. We suggest you arrive as early as possible, as there may be a bit of a wait to get inside Roy Thomson Hall during peak hours. You should aim to arrive no later than 8:45pm, as the festivities will end at 10pm sharp.</p>
+					<p>Please allocate approximately 1.5 to 2 hours for this event, as there will be lineups for the grilled cheese sandwiches. Our grilled cheese vendors will try their best to churn out as many sandwiches as they humanly can! </p>
+				</span>
+			</li>
+			<li>
+				<span class="question">
+					Is this a family-friendly event? What if I'm under 19 years old?
+				</span>
+				<span class="answer">
+					<p>All attendees must be 19+ years of age to attend Grilled Cheese Fest, as alcohol will be served at this event.</p>
+					<p>All attendees must show proof of valid I.D. at the door to attend the event. This includes driver's license, passport, citizenship card, and/or age of majority card. Health cards will NOT be accepted.<p>
+				</span>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<span class="question">
+					Are there any vegetarian options?
+				</span>
+				<span class="answer">
+					<p>Yes, we do have a few select grilled cheese sandwiches that are vegetarian. See (vegetarian icon) on sample menu.</p>
+				</span>
+			</li>
+			<li>
+				<span class="question">
+					Is there coat check service available?
+				</span>
+				<span class="answer">
+					Yes, Roy Thomson Hall provides coat check service at $2 per item. 
+				</span>
+			</li>
+		</ul>
+		<span class="note">
+			<strong>NOTE:</strong> All sponsors, vendors, and grilled cheese sandwich types are subject to change without notice.
+		</span>
+		<div class="followup">
+			Got more questions? Send us an email at:<br/><a href="mailto:help@joylister.com" style="display:block; margin-top:10px;">help@joylister.com</a>
+		</div>
+	</div>
+	</section>
+
+	<section name="details" id="details">
+
+		<div class="img-bg">
+			<img src="image/grilled-cheese/img-bg.png" alt="Roy Thomson Hall" >
+		</div>
+
+		<div class="content_cap">
+			<article>
+				<div class="left">
+					<h1>Event Details</h1>
+					<p><strong>Date:</strong> Friday, February 28th, 2014</p>
+					<p><strong>Time:</strong> 5:30pm to 10:00pm (please arrive before 8:45pm)</p>
+					<p><strong>Location:</strong> Roy Thomson Hall, 60 Simcoe Street, Toronto, M5J 2H5</p>
+					<p><strong>By TTC:</strong> From St. Andrew Subway Station > Walk west along King Street West > Turn left heading south along Simcoe St. > The glass doors of the entrance will be on the west side (right) of the street. > Total walking time is approx. 2 minutes.</p>
+					<p><strong>Parking:</strong> MetroCentre 24-Hour Public Parking (underground to Roy Thomson Hall) can be accessed from Wellington St W. Friday evening flat rate of $15.</p>
+				</div>
+				<div class="right">
+					<h1>Roy Thomson Hall</h1>
+					<p>Located in the heart of King Street Theatre District since 1982, this acclaimed concert hall landmark boasts a curvilinear exterior design and sloping glass canopy, which is reflective by day and transparent by night.</p>
+					<p> Roy Thomson Hall is the home of the Toronto Symphony Orchestra and the premier venue for the Toronto International Film Festival’s gala screenings.</p>
+				</div>
+			</article>
+		</div>
+	</section>
+
+	<section name="map" id="map">
+		<div id="map_canvas"></div>
+	</section>
+
+	<section name="signup" id="signup">
+		<div class="content_cap">
+		
+		<h2>Join the Joylister Mailing List for<br>invitations to other great events!</h2>
+				
+		<div class="signup_form">
+			
+			<form id="footer_signup" class="signup-form centered" action="">
+				<div class="email-inner">
+					<input id="footer_email" type="text" name="email" placeholder="Your email address" class="input-full placeholder">
+				</div>
+				<div class="names-inner hidden">
+					<input id="footer_fname" class="input-half" type="text" name="fname" placeholder="First name">
+					<input id="footer_lname" class="input-half" type="text" name="lname" placeholder="Last name">
+				</div>
+				<input type="submit"  value="Sign Me Up">
+				<input type="hidden" name="mail_list" value="grilled-cheese-fest">
+			</form>
+			<div class="alert alert-info hidden"></div>
+
+		</div>
+
+	</div>
+	</section>
+
+	<section name="sponsors" id="sponsors">
+		<div class="content_cap">
+			<h2>Our Sponsors</h2>
+			<ul>
+				<li><p>Official Beer Sponsor</p><img src="image/grilled-cheese/sponsors/CreeSpr_Brewery.jpg"/><span>Creemore Springs Brewery</span></li>
+				<li><p>Official Cheese Sponsor</p><img src="image/grilled-cheese/sponsors/balderson_logo.png"/><span>Balderson</span></li>
+				<li><p>Official Bread Sponsor</p><img src="image/grilled-cheese/sponsors/dimpflmeier_logo.png"/><span>Dimpflmeier</span></li>
+				<li><p>Official Music Sponsor</p><img src="image/grilled-cheese/sponsors/Indie88.png"/><span>Indie88</span></li>
+				<li><p>On-Demand Car Service</p><img src="image/grilled-cheese/sponsors/uber_logo.png"/><span>Uber</span></li>
+			</ul>        
+		</div>
+	</section>
+
+	<section id="footer" name="footer">
+		<div class="content_cap">
+		<div class="footer_bullets">
+			<span class="footer_element">
+				<img src="image/grilled-cheese/icon_mail.png"/>
+				<h4>Contact us</h4>
+				<p>If you have any questions or feedback, feel free to contact us. We'll get back to you as soon as we can. :)</p>
+				<p><a href="mailto:help@joylister.com">help@joylister.com</a></p>
+			</span>
+			<span class="footer_element">
+				<img src="image/grilled-cheese/icon_share.png"/>
+				<h4>Share</h4>
+				<p>Share Grilled Cheese Fest on Facebook or Twitter and spread the joy!</p>
+
+				<a class="facebook" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;"><span>Facebook</span></a>
+				<a class="twitter" href="#" onclick="window.open('http://twitter.com/share?text=Checking+out+Grilled+Cheese+Fest+on+Joylister+#GrilledCheeseFest!&url=http://www.joylister.com/grilled-cheese-fest','twitter-share-dialog','width=550,height=284'); return false;"><span>Twitter</span></a>
+			</span>
+			<span class="footer_element">
+				<img src="image/grilled-cheese/icon_mail.png"/>
+				<h4>Who's Joylister?</h4>
+				<p>Joylister is a place to discover interesting and unique events around your city.</p>
+			</span>
+			<span class="footer_element">
+				<img src="image/grilled-cheese/icon_media.png"/>
+				<h4>Media & Sponsors</h4>
+				<p>Interested in providing media coverage or sponsorship? Tell us how you want to get involved.</p>
+				<p><a href="mailto:help@joylister.com">help@joylister.com</a></p>
+			</span>
+		</div>
+
+			<hr/>
+
+			<div class="minor_nav">
+				<a href="/">Home</a> | 
+				<a href="/tos">Terms of Service</a> | 
+				<a href="/privacy">Privacy Policy</a> | 
+				<a href="mailto:help@joylister.com">Contact Us</a>
+			</div>
+		</div>
+	</section>
+</body>
+
+	<script type="text/javascript">
+		setTimeout(function(){var a=document.createElement("script");
+		var b=document.getElementsByTagName("script")[0];
+		a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/7991.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+	</script>
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-34106705-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+</html>
