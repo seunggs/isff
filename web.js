@@ -106,6 +106,8 @@ app.get('/email', function(request, response) {
 			console.log(query.mail_list + " is the list to be subscribed");
 			if(query.mail_list == 'grilled-cheese-fest') {
 				path += "&id=66f3172c35";
+			} else if(query.mail_list == 'gcf-waitlist') {
+				path += "&id=5d49ad42bd";
 			} else {
 				path += "&id=785c85c66f"; // default to master list
 			}
