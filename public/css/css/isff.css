@@ -1,0 +1,96 @@
+body {
+  font-family: "Whitney SSm A", "Whitney SSm B";
+  font-weight: 400;
+  font-style: normal; }
+
+.headline {
+  text-align: center; }
+  .headline h3 {
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-top: 45px; }
+  .headline hr {
+    border-color: black;
+    width: 80px; }
+  .headline .teaser-text {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.2em;
+    color: #bbbbbb; }
+
+.photos {
+  padding: 0;
+  margin: 15px 0 0 0; }
+  .photos .photo {
+    width: 100%; }
+    .photos .photo:last-child {
+      margin-top: 19px; }
+
+.content {
+  padding: 15px; }
+  .content h3 {
+    margin-bottom: 20px; }
+  .content p {
+    font-size: 1.15em;
+    color: #666666; }
+  .content .booking-box {
+    padding: 20px 20px 30px 20px;
+    margin-top: 20px;
+    text-align: center;
+    border: 1px solid #e5e5e5; }
+    .content .booking-box h4 {
+      font-size: 1.6em;
+      color: #aaaaaa;
+      line-height: 1.3em; }
+    .content .booking-box table {
+      text-align: left;
+      font-size: 1.15em;
+      margin: 15px auto;
+      width: 90%; }
+      .content .booking-box table td {
+        padding: 5px; }
+        .content .booking-box table td:first-child {
+          width: 30%; }
+        .content .booking-box table td:last-child {
+          width: 70%; }
+    .content .booking-box .btn {
+      width: 90%; }
+    .content .booking-box .booking-input {
+      height: 45px;
+      width: 90%;
+      margin: 0 auto; }
+
+.feature-wrapper {
+  margin-top: 30px;
+  width: 100%;
+  background-color: whitesmoke; }
+
+.feature {
+  height: auto;
+  background: -webkit-linear-gradient(top left, #004986, #00a2ca);
+  background: -o-linear-gradient(bottom right, #004986, #00a2ca);
+  background: -moz-linear-gradient(bottom right, #004986, #00a2ca);
+  background: linear-gradient(to bottom right, #004986, #00a2ca);
+  text-align: center;
+  padding: 40px; }
+  .feature .logo {
+    width: 100%; }
+  .feature .signup-section {
+    margin-top: 20px;
+    text-align: left; }
+    .feature .signup-section h4 {
+      font-size: 1.6em;
+      font-weight: 500;
+      color: white;
+      line-height: 1.4em;
+      margin-bottom: 10px; }
+    .feature .signup-section .signup-input {
+      width: 80%;
+      height: 45px;
+      border: 1px solid #175c97; }
+    .feature .signup-section .btn {
+      margin: 15px 0; }
+    .feature .signup-section .signup-subtext {
+      color: #dddddd;
+      font-size: 1.15em;
+      margin-bottom: 15px; }
