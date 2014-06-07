@@ -73,7 +73,12 @@ body {
   background: linear-gradient(to bottom right, #004986, #00a2ca);
   text-align: center;
   padding: 40px; }
+  .feature .v-center {
+    display: inline-block;
+    float: none;
+    vertical-align: middle; }
   .feature .logo {
+    max-width: 300px;
     width: 100%; }
   .feature .signup-section {
     margin-top: 20px;
