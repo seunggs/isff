@@ -6,6 +6,7 @@ body {
 .headline {
   text-align: center; }
   .headline h3 {
+    color: #c41230;
     font-size: 2.5em;
     font-weight: 500;
     margin-top: 45px; }
@@ -30,9 +31,11 @@ body {
   padding: 15px; }
   .content h3 {
     margin-bottom: 20px; }
-  .content p {
+  .content p, .content li {
     font-size: 1.15em;
     color: #666666; }
+  .content li {
+    line-height: 1.8em; }
   .content .booking-box {
     padding: 20px 20px 30px 20px;
     margin-top: 20px;
@@ -56,9 +59,11 @@ body {
     .content .booking-box .btn {
       width: 90%; }
     .content .booking-box .booking-input {
-      height: 45px;
+      height: 42px;
       width: 90%;
-      margin: 0 auto; }
+      margin: 5px auto 0 auto; }
+  .content .support h3 {
+    color: black; }
 
 .feature-wrapper {
   margin-top: 30px;
@@ -90,9 +95,9 @@ body {
       line-height: 1.4em;
       margin-bottom: 10px; }
     .feature .signup-section .signup-input {
-      width: 80%;
-      height: 45px;
-      border: 1px solid #175c97; }
+      height: 42px;
+      margin: 3px 0 0 0;
+      border: 1px solid #1269b5; }
     .feature .signup-section .btn {
       margin: 15px 0; }
     .feature .signup-section .signup-subtext {
